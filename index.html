@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <!-- Import Bootstrap,Jquery... -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Header styles -->
+
+    <style type="text/css">
+
+		.large-header{
+			position: relative;
+			width: 100%;
+			background: #111;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center center;
+			z-index: 1;
+		}
+
+		.demo .large-header{
+			background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+		}
+
+		.main-title{
+			/* position: absolute; */
+			margin: 0;
+			padding: 0;
+			color: #f9f1e9;
+			text-align: center;
+			/* top:60%;
+			left: 50%;
+			-webkit-transform: translate3d(-50%,-50%,0);
+            transform: translate(-50%,-50%,0); */
+            /* position:absolute;
+            top: 100%; left: 50%;
+            transform: translate(-50%,-50%); */
+            position:relative;
+            
+        }
+        
+        .sub-title{
+            /* border:1px solid green; */
+			margin: 0;
+            padding: 0;
+            color: #f9f1e9;
+            font-family:'Raleway-Thin';
+            font-size:0.7em;
+            
+            letter-spacing: 0.1em;
+            /* top:65%;
+			left: 50%;
+			-webkit-transform: translate3d(-50%,-50%,0);
+            transform: translate(-50%,-50%,0); */
+            position: relative; 
+            text-align: center;
+            padding-top:5px;
+            
+               
+        }
+
+		.demo .main-title{
+			text-transform: uppercase;
+			font-size: 1.2em;
+            letter-spacing: 0.1em;
+            font-family:'Raleway-Thin';
+        }
+        .main-title .fat{
+            font-family:'Raleway';
+        }
+
+		.main-title .thin{
+			font-weight: 200;
+		}
+
+	
+    </style>
+    
+    
+</head>
+<body>
+    <div class="container-fluid w-100 px-0 mx-0 demo">
+		<div class="content">
+			<div id="large-header" class="large-header" style="height: 1740px;">
+                <canvas id="demo-canvas" width="980" height="1740"></canvas>
+                <div class="container stuff show">
+                    <span class="dot"></span>
+                    <div class="main-text">
+                        <h2 class="main-title">
+                            <span class="thin">I'm </span> <span class="fat">Mohamed Salama</span>
+                        </h2>
+                        <p class="sub-title"> I'm a blah and a blah and most importantly a blah
+                        but again I have been known to blah blah</p>
+                        <div class="row show">
+                        <div class="arrow-box">
+                            <div class="arrow arrow-1"></div>
+                            <div class="arrow arrow-2"></div>
+                        </div>
+                       
+
+                        
+                    </div>
+                    
+                </div>
+                
+			</div>
+		</div>
+    </div>
+    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
+    
+</body>
+</html>

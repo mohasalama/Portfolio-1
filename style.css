@@ -1,0 +1,293 @@
+
+* {
+    margin:0;
+    padding:0;
+}
+
+section{
+    display:block;
+}
+
+/* .show{
+    border:1px solid green;
+} */
+
+.dot{
+    height: 250px;
+    width: 250px;
+    background-color: #bbb;
+    border-radius: 50%;  
+    
+
+    /* position:absolute;
+    top:30%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate(-50%,-50%,0); */
+    position:absolute;
+    display:inline-block;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.stuff{
+    position:absolute;
+    
+    height:400px;
+    top:40%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate(-50%,-50%,0);
+}
+.main-text{
+    /* border:1px solid blue; */
+    /* position:absolute;
+    top:100%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate(-50%,-50%,0);
+     */
+    position:relative;
+    top:400px;
+    
+    
+}
+
+@media (min-width:320px)  {
+    
+    
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+
+@media (min-width: 640px) {
+
+}
+
+@media (min-width: 768px) {
+
+    .main-text{
+        top:400px;
+    }
+    .stuff{
+        height:400px;
+        top:40%;
+        left: 50%;
+    }
+    .dot{
+        height: 300px;
+        width: 300px;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .sub-title{
+        top:10px;
+    }
+    
+    .demo .main-title{
+        font-size: 2.2em;
+        letter-spacing: 0.1em;
+    }
+}
+
+@media (min-width:961px)  { 
+    .arrow-box{
+        position:absolute;
+        height:30px;
+        width:30px;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        margin-top:100px;
+        cursor:pointer;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
+
+
+
+
+
+/* =================================== Arrow ===================================*/
+.arrow-box{
+    position:absolute;
+    height:20px;
+    width:20px;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top:70px;
+    cursor:pointer;
+}
+.arrow {
+    opacity: 0;
+    margin:0;
+    padding:0;
+    position: relative;
+    cursor:pointer;
+   
+  }
+  .arrow-1 :hover{
+      opacity:1;
+  }
+  .arrow-2 :hover{
+      opacity:1;
+  }
+  
+  .arrow-1 {
+    -webkit-animation: arrow-movement 3s ease-in-out infinite;
+            animation: arrow-movement 3s ease-in-out infinite;
+  }
+  
+  .arrow-2 {
+    -webkit-animation: arrow-movement 3s 1s ease-in-out infinite;
+            animation: arrow-movement 3s 1s ease-in-out infinite;
+  }
+  
+  .arrow:before,
+  .arrow:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .arrow:before {
+    -webkit-transform: rotate(45deg) translateX(-23%);
+            transform: rotate(45deg) translateX(-23%);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+  
+  .arrow:after {
+    -webkit-transform: rotate(-45deg) translateX(23%);
+            transform: rotate(-45deg) translateX(23%);
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+  }
+  
+  @-webkit-keyframes arrow-movement {
+    0% {
+      opacity: 0;
+      top: 45%;
+    }
+    70% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes arrow-movement {
+    0% {
+      opacity: 0;
+      top: 45%;
+    }
+    70% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  /* =================================== Arrow ===================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================== FONTS =================== */
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Regular.eot');
+    src: url('fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Raleway-Regular.woff2') format('woff2'),
+        url('fonts/Raleway-Regular.woff') format('woff'),
+        url('fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway-Thin';
+    src: url('fonts/Raleway-Thin.eot');
+    src: url('fonts/Raleway-Thin.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Raleway-Thin.woff2') format('woff2'),
+        url('fonts/Raleway-Thin.woff') format('woff'),
+        url('fonts/Raleway-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway-SemiBold';
+    src: url('fonts/Raleway-SemiBold.eot');
+    src: url('fonts/Raleway-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Raleway-SemiBold.woff2') format('woff2'),
+        url('fonts/Raleway-SemiBold.woff') format('woff'),
+        url('fonts/Raleway-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway-Light';
+    src: url('fonts/Raleway-Light.eot');
+    src: url('fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Raleway-Light.woff2') format('woff2'),
+        url('fonts/Raleway-Light.woff') format('woff'),
+        url('fonts/Raleway-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+/* =================== FONTS =================== */
+
+
