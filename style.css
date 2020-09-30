@@ -6,7 +6,7 @@
 
 body{
     height:100vh;
-    /* overflow:hidden; */
+    overflow:hidden;
 }
 
 .container-fluid{
@@ -25,6 +25,10 @@ section{
     width:100%;
     background-color:rgb(142, 218, 218);
     scroll-snap-align: center;
+}
+
+#page3{
+    background-color:rgb(62, 135, 202);
 }
 
 /* .show{
