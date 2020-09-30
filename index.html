@@ -84,13 +84,14 @@
 
 	
     </style>
+
     
     
 </head>
 <body>
     <div class="container-fluid w-100 px-0 mx-0 demo">
 
-		<section id="page1" class="content">
+		<section id="section1" data-anchor="page1" class="content">
 			<div id="large-header" class="large-header" style="height: 1740px;">
                 <canvas id="demo-canvas" width="980" height="1740"></canvas>
                 <div class="container stuff show">
@@ -118,25 +119,42 @@
                 
 			</div>
         </section>
-        <section id="page2">
+        <section id="section2" data-anchor="page2">
             <h1>Page 2</h1>
         </section>
-        <section id="page3">
+        <section id="section3" data-anchor="page3">
             <h1>Page 3</h1>
         </section>
     </div>
+
+    <!-- Space Effect -->
     <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
     <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
     <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
-    <script src="main.js"></script>
+    
+    <!-- <script src="main.js"></script> -->
     <script src="//code.jquery.com/jquery-3.2.0.min.js"></script> 
-    <script src='jquery.fullpage.min.js'></script>
+    
+    <script src='jquery.fullpage.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" integrity="sha512-/AilQf/shuEGfh8c3DoIqcIqHZCKpiImSyt+fxIKJphHiNa6QMPb6AbDly6rkjmGr/5OZd35JtvVkbEKnCZO+A==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" integrity="sha512-0xW5KFMtT462F65vVvIejNawM1U2Fp/yhItmQVFUwdYP+R9tQFCn4QtLEhkp6RoGovZ6YCvbxy+GVCtGv0+nvA==" crossorigin="anonymous"></script>
     <script type="text/javascript">
         $('.container-fluid').fullpage({
-                autoScrolling:true,
-                navigation:true
+                
+                autoScrolling:false,
+                anchors : ['page1','page2','page3'],
+                navigation:true,
+                animateAnchor:true,
+                css3: true,
+                navigationPosition: "right",
+                slidesNavigation: true
             }
         );
+        $(document).on('click', 'a', function(){
+            alert('yo');
+            fullpage_api.moveSectionDown();
+        });
+        
 
 
         // const sections = [];

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        section{
+            background-color:rgb(119, 197, 197);
+            height:100vh;
+            width:100%;
+        
+        }
+        section.page2{
+            background-color:rgb(57, 117, 117);
+        }
+        section.page3{
+            background-color:rgb(194, 134, 191);
+        }
+        h1{
+            font-size:100px;
+        }
+    </style>
+    <div id="fullpage">
+        <section><h1>hello</h1></section>
+        <section class="page2"><h1>Whats Up?</h1></section>
+        <section class="page3"><h1>Not much</h1></section>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.js" integrity="sha512-eH2N2Zt2AeLuFlFvRSEeZcVeAESY+8nfIqhxx0XXEou6w/G4lLY3K8UKNYqi6e1pLXDduVF1KF/lbyxy3+X6OA==" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        new fullpage('#fullpage', {
+
+        });
+    </script>
+</body>
+</html>
