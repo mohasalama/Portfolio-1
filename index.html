@@ -136,24 +136,25 @@
     <script src="//code.jquery.com/jquery-3.2.0.min.js"></script> 
     
     <script src='jquery.fullpage.js'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" integrity="sha512-/AilQf/shuEGfh8c3DoIqcIqHZCKpiImSyt+fxIKJphHiNa6QMPb6AbDly6rkjmGr/5OZd35JtvVkbEKnCZO+A==" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" integrity="sha512-0xW5KFMtT462F65vVvIejNawM1U2Fp/yhItmQVFUwdYP+R9tQFCn4QtLEhkp6RoGovZ6YCvbxy+GVCtGv0+nvA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fullpage.css">
     <script type="text/javascript">
-        $('.container-fluid').fullpage({
-                
-                autoScrolling:false,
-                anchors : ['page1','page2','page3'],
-                navigation:true,
-                animateAnchor:true,
-                css3: true,
-                navigationPosition: "right",
-                slidesNavigation: true
-            }
-        );
-        $(document).on('click', 'a', function(){
-            alert('yo');
-            fullpage_api.moveSectionDown();
+
+        $( document ).ready(function() {
+            $('.container-fluid').fullpage({
+                        
+                        autoScrolling:false,
+                        anchors : ['page1','page2','page3'],
+                        navigation:true,
+                        animateAnchor:true,
+                        css3: true,
+                        navigationPosition: "right",
+                        slidesNavigation: true
+                    }
+                );
         });
+    
+        
+        
         
 
 
