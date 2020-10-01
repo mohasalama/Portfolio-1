@@ -89,9 +89,13 @@
     
 </head>
 <body>
-    <div class="container-fluid w-100 px-0 mx-0 demo">
+    <link href="fullpage_old.css" rel="stylesheet"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script src="jquery.fullpage_old.js"></script>
 
-		<section id="section1" data-anchor="page1" class="content">
+    <!-- <div id="fullpage" class="container-fluid w-100 px-0 mx-0 demo">
+
+		<div class="section">
 			<div id="large-header" class="large-header" style="height: 1740px;">
                 <canvas id="demo-canvas" width="980" height="1740"></canvas>
                 <div class="container stuff show">
@@ -109,22 +113,47 @@
                                 <div class="arrow arrow-2"></div>
                             </div>
                         </a>
-                        
-                       
-
-                        
                     </div>
                     
                 </div>
                 
 			</div>
-        </section>
-        <section id="section2" data-anchor="page2">
+        </div>
+        <div class="section">
             <h1>Page 2</h1>
-        </section>
-        <section id="section3" data-anchor="page3">
+        </div>
+        <div class="section">
             <h1>Page 3</h1>
-        </section>
+        </div>
+    </div> -->
+    <div id="fullpage" class="container-fluid w-100 px-0 mx-0 demo">
+        <div class="section" data-anchor="section1">
+            <div id="large-header" class="large-header" style="height: 1740px;">
+                <canvas id="demo-canvas" width="980" height="1740"></canvas>
+                <div class="container stuff show">
+                    <span class="dot"></span>
+                    <div class="main-text">
+                        <h2 class="main-title">
+                            <span class="thin">I'm </span> <span class="fat">Mohamed Salama</span>
+                        </h2>
+                        <p class="sub-title"> I'm a blah and a blah and most importantly a blah
+                            but again I have been known to blah blah</p>
+                        <div class="row show">
+                            <a href="#section2">
+                                <div class="arrow-box">
+                                    <div class="arrow arrow-1"></div>
+                                    <div class="arrow arrow-2"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+        </div>
+        <div class="section" data-anchor="section2"><h1>Whats Up?</h1></div>
+        <div class="section" data-anchor="section3"><h1>Not much</h1></div>
     </div>
 
     <!-- Space Effect -->
@@ -132,25 +161,48 @@
     <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
     <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
     
-    <!-- <script src="main.js"></script> -->
-    <script src="//code.jquery.com/jquery-3.2.0.min.js"></script> 
-    
-    <script src='jquery.fullpage.js'></script>
-    <link rel="stylesheet" href="fullpage.css">
+    <style>
+        #fp-nav ul:hover .fp-tooltip{
+            right: 20px;
+            transition: opacity 0.2s ease-in;
+            width: auto;
+            opacity: 1;
+        }
+        /* Change the dots */
+        /* #fp-nav ul li a span, .fp-slidesNav ul li a span {
+            background: yellow;
+        } */
+    </style>
+
     <script type="text/javascript">
 
-        $( document ).ready(function() {
-            $('.container-fluid').fullpage({
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
                         
-                        autoScrolling:false,
-                        anchors : ['page1','page2','page3'],
                         navigation:true,
-                        animateAnchor:true,
-                        css3: true,
-                        navigationPosition: "right",
-                        slidesNavigation: true
+                        navigationTooltips:['hello','jello','welcome'],
+                        afterLoad: function(anchorLink, index) {
+                            // Objects 
+                            var loadedSection = $(this);
+                            var loadedSlide = loadedSection.find('.slide.active');
+                            // SlideNumber
+                            var slideNumber = $('.fp-section.active').index() + 1;
+                            if (slideNumber==1){
+                                $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": "rgba(219, 210, 210, 0.4)"});
+                            }
+                            else{
+                                $('#fp-nav ul li .fp-tooltip').css({"color":"black"});
+                                $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": '#333333'});
+                            }
+                        }
                     }
                 );
+        
+            // How to move sections up and down
+            // $('#hello').on('click',function(e){
+            //     alert('yo');
+            //     $.fn.fullpage.moveSectionDown();
+            // })
         });
     
         
