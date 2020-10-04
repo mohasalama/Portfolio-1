@@ -13,6 +13,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
     <!-- Header styles -->
 
     <style type="text/css">
@@ -28,8 +31,20 @@
 		}
 
 		.demo .large-header{
-			background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
-		}
+            background-image: url("space.jpg");
+            
+        }
+        .demo .large-header-flipped{
+            position: relative;
+			width: 100%;
+			background: #111;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center center;
+			z-index: 1;
+            background-image: url("space-flipped.jpg");
+            
+        }
 
 		.main-title{
 			/* position: absolute; */
@@ -93,39 +108,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
     <script src="jquery.fullpage_old.js"></script>
 
-    <!-- <div id="fullpage" class="container-fluid w-100 px-0 mx-0 demo">
-
-		<div class="section">
-			<div id="large-header" class="large-header" style="height: 1740px;">
-                <canvas id="demo-canvas" width="980" height="1740"></canvas>
-                <div class="container stuff show">
-                    <span class="dot"></span>
-                    <div class="main-text">
-                        <h2 class="main-title">
-                            <span class="thin">I'm </span> <span class="fat">Mohamed Salama</span>
-                        </h2>
-                        <p class="sub-title"> I'm a blah and a blah and most importantly a blah
-                        but again I have been known to blah blah</p>
-                        <div class="row show">
-                        <a href="#page2">
-                            <div class="arrow-box">
-                                <div class="arrow arrow-1"></div>
-                                <div class="arrow arrow-2"></div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                </div>
-                
-			</div>
-        </div>
-        <div class="section">
-            <h1>Page 2</h1>
-        </div>
-        <div class="section">
-            <h1>Page 3</h1>
-        </div>
-    </div> -->
+    
     <div id="fullpage" class="container-fluid w-100 px-0 mx-0 demo">
         <div class="section" data-anchor="section1">
             <div id="large-header" class="large-header" style="height: 1740px;">
@@ -152,7 +135,48 @@
             
         
         </div>
-        <div class="section" data-anchor="section2"><h1>Whats Up?</h1></div>
+        <div class="section" data-anchor="section2">
+            <div id="large-header" class="large-header-flipped" style="height: 100vh;">
+                <div class="everythingelse" >
+                    <h1>About me</h1>
+
+                    <div class="lol" style="display:none">
+                        <img class="image" src="/Asset 3.png">
+                    </div>
+                    <div class="rocket">
+                        <div class="rocket-body">
+                        <div class="body"></div>
+                        <div class="fin fin-left"></div>
+                        <div class="fin fin-right"></div>
+                        <div class="window"></div>
+                        </div>
+                        <div class="exhaust-flame"></div>
+                        <ul class="exhaust-fumes">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        </ul>
+                        <ul class="star">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+           
+        </div>
         <div class="section" data-anchor="section3"><h1>Not much</h1></div>
     </div>
 
@@ -171,6 +195,17 @@
         /* Change the dots */
         /* #fp-nav ul li a span, .fp-slidesNav ul li a span {
             background: yellow;
+        } */
+        .fp-viewing-section-1 .dot{
+            background-color:red !important;
+            background-color: black !important;
+        }
+        h1{
+            transition: all 3s ease-out;
+            -webkit-transition: all 3s ease-out;
+        }
+        /* .fp-viewing-section2 h1{
+            font-size:200px;
         } */
     </style>
 
