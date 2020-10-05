@@ -41,10 +41,9 @@ body{
     top:0;
     
 }
-.lol{
-    overflow:hidden; height: (depends on your image, then make it a smaller px); width:100%;
+.aboutme{
+    top:50%;
 }
-
 .dot{
     height: 250px;
     width: 250px;
@@ -84,7 +83,6 @@ body{
      */
     position:relative;
     top:400px;
-    
     
 }
 
