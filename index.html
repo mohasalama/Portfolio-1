@@ -69,8 +69,8 @@
             padding: 0;
             color: #f9f1e9;
             font-family:'Raleway-Thin';
-            font-size:0.7em;
-            font-size:3vw;
+            font-size:0.8em;
+            
             
             letter-spacing: 0.1em;
             /* top:65%;
@@ -83,6 +83,9 @@
             
                
         }
+        .sub-title .about{
+            font-size:3vw;
+        }
 
 		.demo .main-title{
 			text-transform: uppercase;
@@ -90,8 +93,14 @@
             letter-spacing: 0.1em;
             font-family:'Raleway-Thin';
         }
+
         .main-title .fat{
-            font-family:'Raleway';
+            font-family:'Raleway' !important;
+        }
+        
+        .hello{
+            text-transform: capitalize !important;
+            font-size: 5em !important;
         }
 
 		.main-title .thin{
@@ -115,22 +124,28 @@
             <div id="large-header" class="large-header" style="height: 1740px;">
                 <canvas id="demo-canvas" width="980" height="1740"></canvas>
                 <div class="container stuff show">
-                    <span class="dot"></span>
+                    <!-- <span class="dot"></span> -->
+                    
+                    <img class="me" src="me.png" alt="">
+                   
                     <div class="main-text">
+
+                        <h1 class="main-title hello">Hello!</h1>
                         <h2 class="main-title">
                             <span class="thin">I'm </span> <span class="fat">Mohamed Salama</span>
                         </h2>
-                        <p class="sub-title"> I'm a blah and a blah and most importantly a blah
-                            but again I have been known to blah blah</p>
-                        <div class="row show">
-                            <a href="#section2">
-                                <div class="arrow-box">
-                                    <div class="arrow arrow-1"></div>
-                                    <div class="arrow arrow-2"></div>
-                                </div>
-                            </a>
-                        </div>
+                        <p class="sub-title"> Front-end developer and programmer</p>
+                        
                     </div>
+                    
+                </div>
+                <div class="row show">
+                    <a href="#section2">
+                        <div class="arrow-box">
+                            <div class="arrow arrow-1"></div>
+                            <div class="arrow arrow-2"></div>
+                        </div>
+                    </a>
                 </div>
                
             </div>
@@ -156,12 +171,22 @@
                 
                 
                     <h1 class="main-title fat aboutme">About me</h1>
-                    <p class="sub-title" style="top:20%;width:100%;opacity:0">
-                        I'm a developer and a belveoper and <br>
+                    <p class="sub-title about" style="font-size:30px">
+                        I'm a recent graduate with a double degree in Computer Science and Physics <br>
                         and I like to do things occasionally. <br>
                         And other thngs as well i like to do sometimes
                     </p>
-                    <div class="mybutton">VIEW MY WORK</div>
+                    <img class="programmer" src="programmer.svg" alt="">
+
+                    <div class="row justify-content-center" >
+                        <a href="#section3" style="text-decoration: none;">
+                            <div class="button d-flex align-items-center justify-content-center">
+                                <p class="main-title"><span class="fat">View My Work</span></p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- <div class="mybutton">VIEW MY WORK</div> -->
                 
                 
 
@@ -226,8 +251,8 @@
             background-color: black !important;
         }
         h1{
-            transition: all 3s ease-out;
-            -webkit-transition: all 3s ease-out;
+            /* transition: all 3s ease-out;
+            -webkit-transition: all 3s ease-out; */
         }
         /* .fp-viewing-section2 h1{
             font-size:200px;
@@ -239,27 +264,32 @@
 
     <script type="text/javascript">
 
+        var rocket_clicked=false;
+
         $(document).ready(function() {
             $('#fullpage').fullpage({
                         
-                        navigation:true,
-                        navigationTooltips:['hello','jello','welcome'],
-                        afterLoad: function(anchorLink, index) {
-                            // Objects 
-                            var loadedSection = $(this);
-                            var loadedSlide = loadedSection.find('.slide.active');
-                            // SlideNumber
-                            var slideNumber = $('.fp-section.active').index() + 1;
-                            if (slideNumber==1){
-                                $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": "rgba(219, 210, 210, 0.4)"});
-                            }
-                            else{
-                                $('#fp-nav ul li .fp-tooltip').css({"color":"black"});
-                                $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": '#333333'});
-                            }
+                    navigation:true,
+                    navigationTooltips:['hello','jello','welcome'],
+                    afterLoad: function(anchorLink, index) {
+                        // Objects 
+                        var loadedSection = $(this);
+                        var loadedSlide = loadedSection.find('.slide.active');
+                        // SlideNumber
+                        var slideNumber = $('.fp-section.active').index() + 1;
+                        if (slideNumber==1){
+                            $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": "rgba(219, 210, 210, 0.4)"});
                         }
-                    }
-                );
+                        else{
+                            $('#fp-nav ul li .fp-tooltip').css({"color":"black"});
+                            $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": '#333333'});
+                        }
+                       
+                    },
+                   
+                    
+                }
+            );
                     
             $('.rocket').on('click',function(e){
                 const t1 = new TimelineMax();
@@ -284,9 +314,12 @@
                 .fromTo(smoke,3,{height:'200px'},{height:'1000px'},0)
                 .fromTo(smoke,1,{left:'-60px'},{left:'-300px'},0)
                 .to(this,0,{display:"none"})
-                .to(title,0,{'font-size':'30px'},0)
-                .to(title,0,{'top':'10%'},0)
+                .to(title,1,{'font-size':'30px'},0)
+                .to(title,1,{'top':'10px'},0)
                 .to(sub,4,{'opacity':'1'},0);
+
+               
+                rocket_clicked=true;
 
                 
                 
