@@ -155,6 +155,11 @@
                 
                 
                     <h1 class="main-title fat aboutme">About me</h1>
+                    <p class="sub-title" style="top:20%;width:80%;opacity:0">
+                        I'm a developer and a belveoper and <br>
+                        and I like to do things occasionally.
+                        And other thngs as well i like to do sometimes
+                    </p>
                 
                 
 
@@ -257,16 +262,32 @@
             $('.rocket').on('click',function(e){
                 const t1 = new TimelineMax();
                 
+                
                 const smoke = $('.rocket .exhaust-fumes li');
                 const flame = $('.rocket .exhaust-flame');
                 const star  = $('.star');
+                const body = $('.rocket .rocket-body')
+
+                const title = $('.aboutme');
+                const sub = $('.sub-title');
                
                 console.log(smoke);
-                t1.fromTo(this,5,{bottom:'0px'},{bottom:'200%'})
-                .fromTo(smoke,0.5,{opacity:'1'},{opacity:'0'},0)
+                // The ,0 just means play the animation at the same time
+                t1.fromTo(this,1,{bottom:'0px'},{bottom:'80%'})
+                .fromTo(smoke,3,{opacity:'1'},{opacity:'0'},0)
                 .fromTo(flame,0.2,{opacity:'1'},{opacity:'0'},0)
-                .fromTo(star,0.1,{opacity:'1'},{opacity:'0'},0);
-      
+                .fromTo(star,0.1,{opacity:'1'},{opacity:'0'},0)
+                .fromTo(body,1,{opacity:'1'},{opacity:'0'},0)
+                .fromTo(smoke,3,{width:'200px'},{width:'1000px'},0)
+                .fromTo(smoke,3,{height:'200px'},{height:'1000px'},0)
+                .fromTo(smoke,1,{left:'-60px'},{left:'-300px'},0)
+                .to(this,0,{display:"none"})
+                .to(title,0,{'font-size':'30px'},0)
+                .to(title,0,{'top':'10%'},0)
+                .to(sub,4,{'opacity':'1'},0);
+
+                
+                
             })
             // How to move sections up and down
             // $('#hello').on('click',function(e){

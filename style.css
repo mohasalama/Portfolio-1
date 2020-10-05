@@ -42,7 +42,10 @@ body{
     
 }
 .aboutme{
+    /* top:10%; */
+    /* font-size:3rem !important; */
     top:50%;
+    
 }
 .dot{
     height: 250px;
