@@ -177,7 +177,7 @@
                     <div class="col justify-content-center mx-auto" style="height:50px;width:300px">
                         <h1 class="main-title fat aboutme-big d-flex align-items-center justify-content-center">About me</h1>
                         <span class="holder d-flex  justify-content-center">
-                            <div class="rocket baby-rocket pt-3">
+                            <div class="rocket baby-rocket pt-3" style="transform:scale(0.15)">
                                 <div class="rocket-body">
                                     <div class="body"></div>
                                     <div class="fin fin-left"></div>
@@ -193,19 +193,19 @@
                     
                    
                     
-                    <div class="row w-100 mx-auto pt-2 show">
-                        <div class="col">
+                    <div class="row w-100 mx-auto pt-2 show aboutme_desc">
+                        <div class="col h-100">
                             <p class="sub-title about hide">
                                 I'm a recent graduate with a double degree in <span class="fat">Computer Science</span> and <span class="fat">Physics</span> <br>
                                 <br>
-                                <!-- I build/create blah blah blah and have a passion for blah and blah -->
+                                I build/create blah blah blah and have a passion for blah and blah
                             </p>
                         </div>
                        
                     </div>
                     
 
-                    <div class="row justify-content-center show" style="padding-top:100px">
+                    <div class="row justify-content-center show viewmywork" style="padding-top:2em">
                         <a href="#section3" style="text-decoration: none;">
                             <div class="button d-flex align-items-center justify-content-center">
                                 <p class="main-title"><span class="fat">View My Work</span></p>
@@ -376,7 +376,19 @@
             
             const t2 = new TimelineMax();
             const rock = $('.baby-rocket');
-            t2.to(rock,2,{rotation:"+=360"}, "spin");
+            const holder = $('.holder');
+            // t2.to(rock,2,{rotation:"-=120 !important"}, "spin");
+            // t2.to(holder,2,{"transform":"rotate(45deg) scale(0.15)"})
+            // .to(holder,3,{'transform':'translate(-235px,30px) scale(0.15)'},0.2)
+            // .to(holder,2,{'transform':'translate(-235px,0px) scale(0.15)'},0);
+            // t2.to(rock,2,{'transform':'rotate(180deg) scale(0.15)'},0);
+
+            // t2.to(rock,2,{'transform':'translateX(-57px) scale(0.15)'},0.4);
+            // t2.to(holder,2,{'padding-left':'0px'},0.8);
+            // rock.css({'transform':''});
+            // t2.to(rock,2,{"transform":"rotate(45deg) scale(0.15)"},0);
+            
+            
         })
     
         
