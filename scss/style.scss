@@ -9,7 +9,14 @@ body {
   background: linear-gradient(to bottom, $midgrey 0%, $midgrey 70%, $white 100%);
   overflow: hidden;
 }
+.baby-rocket{
+  position:relative !important;
 
+  transform: scale(0.15) !important;
+  top:0px !important;
+  height:5px !important;
+
+}
 .rocket {
   position: absolute;
   

@@ -79,7 +79,7 @@
             transform: translate(-50%,-50%,0); */
             position: relative; 
             text-align: center;
-            padding-top:5px;
+            top:30%;
             
                
         }
@@ -169,16 +169,41 @@
         <div class="section" data-anchor="section2">
             <div id="large-header" class="large-header-flipped" style="height: 100vh;">
                 
+                    
                 
                     <h1 class="main-title fat aboutme">About me</h1>
-                    <p class="sub-title about" style="font-size:30px">
-                        I'm a recent graduate with a double degree in Computer Science and Physics <br>
-                        and I like to do things occasionally. <br>
-                        And other thngs as well i like to do sometimes
-                    </p>
-                    <img class="programmer" src="programmer.svg" alt="">
+                    <div class="col justify-content-center mx-auto" style="height:50px;width:300px">
+                        <h1 class="main-title fat aboutme-big d-flex align-items-center justify-content-center">About me</h1>
+                        <span class="holder d-flex  justify-content-center">
+                            <div class="rocket baby-rocket pt-3">
+                                <div class="rocket-body">
+                                    <div class="body"></div>
+                                    <div class="fin fin-left"></div>
+                                    <div class="fin fin-right"></div>
+                                    <div class="window"></div>
+                                </div>
+                            </div>
+                        </span>
+                        
+                    
+                    </div>
+                    
+                    
+                   
+                    
+                    <div class="row w-100 mx-auto pt-5">
+                        <div class="col">
+                            <p class="sub-title about hide">
+                                I'm a recent graduate with a double degree in Computer Science and Physics <br>
+                             
+                                And other thngs as well i like to do sometimes
+                            </p>
+                        </div>
+                       
+                    </div>
+                    
 
-                    <div class="row justify-content-center" >
+                    <div class="row justify-content-center" style="padding-top:100px">
                         <a href="#section3" style="text-decoration: none;">
                             <div class="button d-flex align-items-center justify-content-center">
                                 <p class="main-title"><span class="fat">View My Work</span></p>
@@ -186,12 +211,15 @@
                         </a>
                     </div>
 
-                    <!-- <div class="mybutton">VIEW MY WORK</div> -->
-                
-                
+                    <img class="programmer" src="programmer.svg" alt="">
 
+                    
+                    
+                
+                
+                
                
-                <div class="rocket">
+                <div class="rocket normal-rocket">
                     <div class="rocket-body">
                     <div class="body"></div>
                     <div class="fin fin-left"></div>
@@ -291,17 +319,23 @@
                 }
             );
                     
-            $('.rocket').on('click',function(e){
+            $('.rocket.normal-rocket').on('click',function(e){
                 const t1 = new TimelineMax();
                 
                 
-                const smoke = $('.rocket .exhaust-fumes li');
-                const flame = $('.rocket .exhaust-flame');
+                const smoke = $('.rocket.normal-rocket .exhaust-fumes li');
+                const flame = $('.rocket.normal-rocket .exhaust-flame');
                 const star  = $('.star');
-                const body = $('.rocket .rocket-body')
+                const body = $('.rocket.normal-rocket .rocket-body')
+                const programmer = $('.programmer');
+
+                const baby_rocket = $('.holder');
 
                 const title = $('.aboutme');
+                const newtitle = $('.aboutme-big');
                 const sub = $('.sub-title');
+
+                const button = $('.button');
                
                 console.log(smoke);
                 // The ,0 just means play the animation at the same time
@@ -313,10 +347,15 @@
                 .fromTo(smoke,3,{width:'200px'},{width:'1000px'},0)
                 .fromTo(smoke,3,{height:'200px'},{height:'1000px'},0)
                 .fromTo(smoke,1,{left:'-60px'},{left:'-300px'},0)
+                .to(programmer,2,{"opacity":"1"},1)
                 .to(this,0,{display:"none"})
-                .to(title,1,{'font-size':'30px'},0)
-                .to(title,1,{'top':'10px'},0)
-                .to(sub,4,{'opacity':'1'},0);
+                .to(title,0,{'opacity':'0'},0)
+                .to(newtitle,3,{'opacity':'1'},0)
+                // .to(title,1,{'font-size':'30px'},0)
+                // .to(title,1,{'top':'10px'},0)
+                .to(sub,4,{'opacity':'1'},0)
+                .to(baby_rocket,0.75,{'top':'4px'},1)
+                .to(button,1,{'opacity':'1'},1.5);
 
                
                 rocket_clicked=true;
@@ -330,6 +369,13 @@
             //     $.fn.fullpage.moveSectionDown();
             // })
         });
+
+        $('.holder .baby-rocket').on('click',function(e){
+            
+            const t2 = new TimelineMax();
+            const rock = $('.baby-rocket');
+            t2.to(rock,2,{rotation:"+=360"}, "spin");
+        })
     
         
         
