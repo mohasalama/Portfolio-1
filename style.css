@@ -94,6 +94,9 @@ body{
 .rocket2{
     top:-100px;
 }
+.rocket3{
+    top:-100px;
+}
 .page_headers{
     font-size:30px !important;
     top:10px;
@@ -118,6 +121,26 @@ body{
 
 .badge{
     height:100px;
+    cursor:pointer;
+    /* transition: 0.2s ease-in-out; */
+    /* transform-style: preserve-3d !important; */
+    transition: transform 0.8s !important; 
+    -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease; 
+   
+}
+.badge:hover{
+    /* transform:scale(1.1) !important; */
+    /* transition: 0.2s ease-in-out; */
+    transform: rotateY(-180deg) scale(1.1)!important; 
+    transition: transform 0.8s !important;
+    -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease; 
+  
+}
+.badge:active{
+    transform: rotateY(-180deg) scale(1.1)!important; 
+    transition: transform 0.8s !important;
+    -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease; 
+  
 }
 .dot{
     height: 250px;
