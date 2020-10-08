@@ -12,6 +12,10 @@ body{
     overflow:hidden;
 }
 
+.contain{
+    object-fit:contain;
+}
+
 .container-fluid{
     height:100%;
     width:100%;
@@ -53,9 +57,18 @@ body{
     background-color:rgb(62, 135, 202);
 }
 
+/* .men{
+    width:300px !important;
+} */
 /* .show{
     border:1px solid green;
 } */
+.blow{
+    border:2px solid blue;
+}
+.throw{
+    border:2px solid yellow;
+}
 
 .image{
     position:absolute;
@@ -76,6 +89,12 @@ body{
 }
 .aboutme-big{
     opacity:0;
+   
+}
+.rocket2{
+    top:0px !important;
+}
+.page_headers{
     font-size:30px !important;
     top:10px;
 }
@@ -95,6 +114,10 @@ body{
     /* font-size:3rem !important; */
     top:50%;
     
+}
+
+.badge{
+    height:100px;
 }
 .dot{
     height: 250px;
@@ -147,7 +170,9 @@ body{
     top:360px;
     
 }
-
+.grid{
+    padding-top:15%;
+}
 .mybutton{
     margin:0;
     padding:0;
@@ -177,7 +202,9 @@ body{
 }
 /* Normal desktop  */
 @media (min-width: 768px) {
-
+    .grid{
+        padding-top:0px;
+    }
     .main-text{
         top:400px;
     }
@@ -230,6 +257,19 @@ body{
 @media (min-width: 1280px) {
 
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px)and (-webkit-device-pixel-ratio: 3){
+    .men{
+        width:300px !important;
+        margin-right: auto!important;
+        margin-left: auto!important;
+    }
+    .grid{
+        padding-top:5px !important;
+    }
+}
+
+
 
 /* Hide fullscreen Page Rows Navigation Dots on Mobile  */
 /* @media only screen and (min-width: 690px) {

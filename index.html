@@ -170,13 +170,11 @@
         </div>
         <div class="section" data-anchor="section2">
             <div id="large-header" class="large-header-flipped" style="min-height: -webkit-fill-available;height:100%">
-                
-                    
-                
+
                     <h1 class="main-title fat aboutme">About me</h1>
                     <div class="col justify-content-center mx-auto" style="height:50px;width:300px">
-                        <h1 class="main-title fat aboutme-big d-flex align-items-center justify-content-center">About me</h1>
-                        <span class="holder d-flex  justify-content-center">
+                        <h1 class="main-title fat aboutme-big page_headers d-flex align-items-center justify-content-center">About me</h1>
+                        <span class="holder rocket1 d-flex  justify-content-center">
                             <div class="rocket baby-rocket pt-3" style="transform:scale(0.15)">
                                 <div class="rocket-body">
                                     <div class="body"></div>
@@ -221,7 +219,7 @@
                 
                 
                
-                <div class="rocket normal-rocket">
+                <div class="rocket normal-rocket rocket1">
                     <div class="rocket-body">
                     <div class="body"></div>
                     <div class="fin fin-left"></div>
@@ -255,7 +253,76 @@
             </div>
            
         </div>
-        <div class="section" data-anchor="section3"><h1>Not much</h1></div>
+        <div class="section" data-anchor="section3">
+            <div id="large-header" class="large-header" style="min-height: -webkit-fill-available;height:100%">
+                <h1 class="main-title fat aboutme" style="opacity:0;">About me</h1>
+
+                <div class="col justify-content-center mx-auto" style="height:50px;width:300px">
+                    <h1 class="main-title fat page_headers d-flex align-items-center justify-content-center">Skills</h1>
+                    <span class="holder rocket2 d-flex justify-content-center">
+                        <div class="rocket rocket2 baby-rocket pt-3" style="transform:scale(0.15)">
+                            <div class="rocket-body">
+                                <div class="body"></div>
+                                <div class="fin fin-left"></div>
+                                <div class="fin fin-right"></div>
+                                <div class="window"></div>
+                            </div>
+                        </div>
+                    </span>
+                
+                </div>
+                <br class="pt-5">
+                <br class="pt-5">
+              
+                <!-- <img class="d-block mx-auto" src="html.png" height="150px" alt=""> -->
+                <div class="container show grid">
+
+                    <!-- Row 1 -->
+                    <div class="row show py-1">
+                        <div class="col mx-auto">
+                            <div class="row men">
+                                <!-- <h1 style="color:white">hello</h1> -->
+                                <img class="d-block mx-auto show contain badge" src="html-new.png" height="150px" alt="">
+                                <img class="d-block mx-auto show contain badge" src="css3-new.png" height="150px" alt="">
+                                <img class="d-block mx-auto show contain badge" src="js-new.png" height="150px" alt="">
+                                </div>
+                            </div>
+                        
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="row show py-1">
+                        <div class="col mx-auto">
+                            <div class="row men">
+                                <!-- <h1 style="color:white">hello</h1> -->
+                                <img class="d-block mx-auto show contain badge" src="react-new.png" alt="">
+                                <img class="d-block mx-auto show contain badge" src="python.png" alt="">
+                                <img class="d-block mx-auto show contain badge" src="mysql.png" alt="">
+                                </div>
+                            </div>
+                        
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="row show py-1">
+                        <div class="col mx-auto">
+                            <div class="row men">
+                                <!-- <h1 style="color:white">hello</h1> -->
+                                <img class="d-block mx-auto show contain badge" src="php-new.png" alt="">
+                                <img class="d-block mx-auto show contain badge" src="photoshop-new.png" alt="">
+                                <img class="d-block mx-auto show contain badge" src="illustrator-new.png" alt="">
+                                </div>
+                            </div>
+                        
+                    </div>
+                     
+
+                   
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <!-- Space Effect -->
@@ -314,6 +381,7 @@
                             $('#fp-nav ul li .fp-tooltip').css({"color":"black"});
                             $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": '#333333'});
                         }
+                        // $.fn.fullpage.setScrollingSpeed(10000);
                        
                     },
                    
@@ -321,17 +389,17 @@
                 }
             );
                     
-            $('.rocket.normal-rocket').on('click',function(e){
+            $('.rocket.normal-rocket.rocket1').on('click',function(e){
                 const t1 = new TimelineMax();
                 
                 
-                const smoke = $('.rocket.normal-rocket .exhaust-fumes li');
-                const flame = $('.rocket.normal-rocket .exhaust-flame');
+                const smoke = $('.rocket.normal-rocket.rocket1 .exhaust-fumes li');
+                const flame = $('.rocket.normal-rocket.rocket1 .exhaust-flame');
                 const star  = $('.star');
-                const body = $('.rocket.normal-rocket .rocket-body')
+                const body = $('.rocket.normal-rocket.rocket1 .rocket-body')
                 const programmer = $('.programmer');
 
-                const baby_rocket = $('.holder');
+                const baby_rocket = $('.holder.rocket1');
 
                 const title = $('.aboutme');
                 const newtitle = $('.aboutme-big');
