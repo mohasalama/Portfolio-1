@@ -282,9 +282,9 @@
                         <div class="col mx-auto">
                             <div class="row men">
                                 <!-- <h1 style="color:white">hello</h1> -->
-                                <img class="d-block mx-auto show contain badge" src="html-new.png" height="150px" alt="">
-                                <img class="d-block mx-auto show contain badge" src="css3-new.png" height="150px" alt="">
-                                <img class="d-block mx-auto show contain badge" src="js-new.png" height="150px" alt="">
+                                <img class="d-block mx-auto show contain badge html" src="html-new.png" height="150px" alt="">
+                                <img class="d-block mx-auto show contain badge css" src="css3-new.png" height="150px" alt="">
+                                <img class="d-block mx-auto show contain badge js" src="js-new.png" height="150px" alt="">
                                 </div>
                             </div>
                         
@@ -295,9 +295,9 @@
                         <div class="col mx-auto">
                             <div class="row men">
                                 <!-- <h1 style="color:white">hello</h1> -->
-                                <img class="d-block mx-auto show contain badge" src="react-new.png" alt="">
-                                <img class="d-block mx-auto show contain badge" src="python.png" alt="">
-                                <img class="d-block mx-auto show contain badge" src="mysql.png" alt="">
+                                <img class="d-block mx-auto show contain badge react" src="react-new.png" alt="">
+                                <img class="d-block mx-auto show contain badge python" src="python.png" alt="">
+                                <img class="d-block mx-auto show contain badge mysql" src="mysql.png" alt="">
                                 </div>
                             </div>
                         
@@ -308,9 +308,9 @@
                         <div class="col mx-auto">
                             <div class="row men">
                                 <!-- <h1 style="color:white">hello</h1> -->
-                                <img class="d-block mx-auto show contain badge" src="php-new.png" alt="">
-                                <img class="d-block mx-auto show contain badge" src="photoshop-new.png" alt="">
-                                <img class="d-block mx-auto show contain badge" src="illustrator-new.png" alt="">
+                                <img class="d-block mx-auto show contain badge php" src="php-new.png" alt="">
+                                <img class="d-block mx-auto show contain badge photoshop" src="photoshop-new.png" alt="">
+                                <img class="d-block mx-auto show contain badge illustrator" src="illustrator-new.png" alt="">
                                 </div>
                             </div>
                         
@@ -364,14 +364,33 @@
         var rocket_clicked=false;
 
         $(document).ready(function() {
+            const width=screen.width;
+            var slide3_loaded = false;
+
+            $('.html').css({'transform':'translateX(-'+(width/3)*1+'px)'});
+            $('.css').css({'transform':'translateX(-'+(width/3)*2+'px)'});
+            $('.js').css({'transform':'translateX(-'+(width/3)*3+'px)'});
+
+            $('.react').css({'transform':'translateX(-'+(width/3)*1+'px)'});
+            $('.python').css({'transform':'translateX(-'+(width/3)*2+'px)'});
+            $('.mysql').css({'transform':'translateX(-'+(width/3)*3+'px)'});
+
+            $('.php').css({'transform':'translateX(-'+(width/3)*1+'px)'});
+            $('.photoshop').css({'transform':'translateX(-'+(width/3)*2+'px)'});
+            $('.illustrator').css({'transform':'translateX(-'+(width/3)*3+'px)'});
+
             $('#fullpage').fullpage({
                         
                     navigation:true,
                     navigationTooltips:['hello','jello','welcome'],
+                    
                     afterLoad: function(anchorLink, index) {
                         // Objects 
                         var loadedSection = $(this);
                         var loadedSlide = loadedSection.find('.slide.active');
+                        
+
+                        const baby_rocket = $('.holder.rocket2');
                         // SlideNumber
                         var slideNumber = $('.fp-section.active').index() + 1;
                         if (slideNumber==1){
@@ -382,8 +401,53 @@
                             $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": '#333333'});
                         }
                         // $.fn.fullpage.setScrollingSpeed(10000);
+                        console.log('slide 3 loaded'+slide3_loaded);
+                        if (slideNumber==3){
+                            console.log('making slide3 loaded = true');
+                            var slide3_loaded = true;
+                            const width = screen.width;
+                            // alert('ok');
+                            const t3 = new TimelineMax();
+                            const baby_rocket = $('.holder.rocket2');
+                            
+                            
+                            t3.to(baby_rocket,0.5,{'top':'0px'})
+                            .fromTo($('.html'),0.5,{'transform':'translateX(-'+(width/3)*1+'px)'},{'transform':'translateX(0px)'},0)
+                            .fromTo($('.css'),0.5,{'transform':'translateX(-'+(width/3)*2+'px)'},{'transform':'translateX(0px)'},0.1)
+                            .fromTo($('.js'),0.5,{'transform':'translateX(-'+(width/3)*3+'px)'},{'transform':'translateX(0px)'},0.2)
+                            .fromTo($('.react'),0.5,{'transform':'translateX(-'+(width/3)*1+'px)'},{'transform':'translateX(0px)'},0.3)
+                            .fromTo($('.python'),0.5,{'transform':'translateX(-'+(width/3)*2+'px)'},{'transform':'translateX(0px)'},0.4)
+                            .fromTo($('.mysql'),0.5,{'transform':'translateX(-'+(width/3)*3+'px)'},{'transform':'translateX(0px)'},0.5)
+                            .fromTo($('.php'),0.5,{'transform':'translateX(-'+(width/3)*1+'px)'},{'transform':'translateX(0px)'},0.3)
+                            .fromTo($('.photoshop'),0.5,{'transform':'translateX(-'+(width/3)*2+'px)'},{'transform':'translateX(0px)'},0.4)
+                            .fromTo($('.illustrator'),0.5,{'transform':'translateX(-'+(width/3)*3+'px)'},{'transform':'translateX(0px)'},0.5)
+
+                            .to($('.html'),1,{rotationY:-360},0.1)
+                            .to($('.css'),1,{rotationY:-360},0.2)
+                            .to($('.js'),1,{rotationY:-360},0.3)
+                            .to($('.react'),1,{rotationY:-360},0.4)
+                            .to($('.python'),1,{rotationY:-360},0.5)
+                            .to($('.mysql'),1,{rotationY:-360},0.6)
+                            .to($('.php'),1,{rotationY:-360},0.7)
+                            .to($('.photoshop'),1,{rotationY:-360},0.8)
+                            .to($('.illustrator'),1,{rotationY:-360},0.9);
+
+                        }
+                        else{
+                            baby_rocket.css({'top':'-100px'});
+                        }
                        
                     },
+                    onLeave: function(origin, destination, direction){
+                        if (origin==3){
+                            var slide3_loaded = true;
+                        }
+                        else{
+                            var slide3_loaded = false;
+                        }
+                        
+                    }
+                    
                    
                     
                 }
