@@ -124,16 +124,16 @@ body{
     cursor:pointer;
     /* transition: 0.2s ease-in-out; */
     /* transform-style: preserve-3d !important; */
-    transition: transform 0.8s !important; 
-    -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease; 
+    /* transition: transform 0.8s !important;  */
+    /* -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease;  */
    
 }
 .badge:hover{
     /* transform:scale(1.1) !important; */
     /* transition: 0.2s ease-in-out; */
     transform: rotateY(-180deg) scale(1.1)!important; 
-    transition: transform 0.8s !important;
-    -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease; 
+    /* transition: transform 0.8s !important; */
+    /* -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease;  */
   
 }
 /* .badge:active{
