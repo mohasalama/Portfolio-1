@@ -136,12 +136,12 @@ body{
     -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease; 
   
 }
-.badge:active{
+/* .badge:active{
     transform: rotateY(-180deg) scale(1.1)!important; 
     transition: transform 0.8s !important;
     -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease; 
   
-}
+} */
 .dot{
     height: 250px;
     width: 250px;
