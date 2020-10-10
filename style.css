@@ -396,34 +396,24 @@ body{
   /* =================================== Arrow ===================================*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .fp-controlArrow.fp-prev {
+    left: 50px !important;
+    border: none;
+    width: 50px !important;
+    height: 101px;
+    background: url('back.svg') no-repeat;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+    cursor: pointer;
+}
+.fp-controlArrow.fp-next {
+    right: 50px !important;
+    border: none;
+    width: 50px !important;
+    height: 101px;
+    background: url('next.svg') no-repeat;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+    cursor: pointer;
+}
 
 
 

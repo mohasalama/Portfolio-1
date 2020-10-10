@@ -285,9 +285,8 @@
                                 <img class="d-block mx-auto show contain badge html" src="html-new.png" height="150px" alt="">
                                 <img class="d-block mx-auto show contain badge css" src="css3-new.png" height="150px" alt="">
                                 <img class="d-block mx-auto show contain badge js" src="js-new.png" height="150px" alt="">
-                                </div>
                             </div>
-                        
+                        </div>
                     </div>
 
                     <!-- Row 2 -->
@@ -298,9 +297,8 @@
                                 <img class="d-block mx-auto show contain badge react" src="react-new.png" alt="">
                                 <img class="d-block mx-auto show contain badge python" src="python.png" alt="">
                                 <img class="d-block mx-auto show contain badge mysql" src="mysql.png" alt="">
-                                </div>
                             </div>
-                        
+                        </div>
                     </div>
 
                     <!-- Row 3 -->
@@ -311,9 +309,8 @@
                                 <img class="d-block mx-auto show contain badge php" src="php-new.png" alt="">
                                 <img class="d-block mx-auto show contain badge photoshop" src="photoshop-new.png" alt="">
                                 <img class="d-block mx-auto show contain badge illustrator" src="illustrator-new.png" alt="">
-                                </div>
                             </div>
-                        
+                        </div>
                     </div>
                      
 
@@ -323,12 +320,12 @@
 
             </div>
         </div>
-
+        
         <div class="section" data-anchor="section4">
-            <div id="large-header" class="large-header" style="min-height: -webkit-fill-available;height:100%">
-                <h1 class="main-title fat aboutme" style="opacity:0;">PROJECTS</h1>
+            <div id="large-header" class="large-header-flipped" style="min-height: -webkit-fill-available;height:100%">
+                <h1 class="main-title fat aboutme" style="opacity:0;">PLACEHOLDER</h1>
                 <div class="col justify-content-center mx-auto" style="height:50px;width:300px">
-                    <h1 class="main-title fat page_headers d-flex align-items-center justify-content-center">RECENT PROJECTS</h1>
+                    <h1 class="main-title fat page_headers d-flex align-items-center justify-content-center" style="white-space: nowrap;">RECENT PROJECTS</h1>
                     <span class="holder rocket3 d-flex justify-content-center">
                         <div class="rocket rocket3 baby-rocket pt-3" style="transform:scale(0.15)">
                             <div class="rocket-body">
@@ -339,8 +336,39 @@
                             </div>
                         </div>
                     </span>
-                
                 </div>
+                
+                    <style>
+                        img{
+                            display:block;
+                             margin:auto;
+                        }
+                    </style>
+
+                    <div class="row throw">
+                        <div class="col throw mx-auto">
+                            <div class="slide">
+                                <img src="whatsmy-1.png" alt="" style="top:0;height:70%;">
+                            </div>
+                            <div class="slide">
+                                <img src="whatsmychordscreen.png" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="whatsmychordscreen.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h1 style="color:white">View on Github</h1>
+                        </div>
+                        <div class="col">
+                            <h1 style="color:white">View Site</h1>
+                        </div>
+                    </div>
+                    
+                   
+                
             </div>
         </div>
        
@@ -402,83 +430,82 @@
 
             $('#fullpage').fullpage({
                         
-                    navigation:true,
-                    navigationTooltips:['hello','jello','welcome'],
+                navigation:true,
+                navigationTooltips:['hello','jello','welcome','delcome'],
+                
+                afterLoad: function(anchorLink, index) {
+                    // Objects 
+                    var loadedSection = $(this);
+                    var loadedSlide = loadedSection.find('.slide.active');
                     
-                    afterLoad: function(anchorLink, index) {
-                        // Objects 
-                        var loadedSection = $(this);
-                        var loadedSlide = loadedSection.find('.slide.active');
-                        
 
-                        const baby_rocket = $('.holder.rocket2');
-                        // SlideNumber
-                        var slideNumber = $('.fp-section.active').index() + 1;
-                        if (slideNumber==1){
-                            $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": "rgba(219, 210, 210, 0.4)"});
-                        }
-                        else{
-                            $('#fp-nav ul li .fp-tooltip').css({"color":"black"});
-                            $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": '#333333'});
-                        }
-                        // $.fn.fullpage.setScrollingSpeed(10000);
-                        console.log('slide 3 loaded'+slide3_loaded);
-                        if (slideNumber==3){
-                            console.log('making slide3 loaded = true');
-                            var slide3_loaded = true;
-                            const width = screen.width;
-                            // alert('ok');
-                            const t3 = new TimelineMax();
-                            const baby_rocket = $('.holder.rocket2');
-                            
-                            
-                            t3.to(baby_rocket,0.8,{'top':'0px'})
-                            .fromTo($('.html'),0.8,{'transform':'translateX(-'+(width/3)*1+'px)'},{'transform':'translateX(0px)','transition':'none'},0)
-                            .fromTo($('.css'),0.8,{'transform':'translateX(-'+(width/3)*2+'px)'},{'transform':'translateX(0px)','transition':'none'},0.2)
-                            .fromTo($('.js'),0.8,{'transform':'translateX(-'+(width/3)*3+'px)'},{'transform':'translateX(0px)','transition':'none'},0.4)
-                            .fromTo($('.react'),0.8,{'transform':'translateX(-'+(width/3)*1+'px)'},{'transform':'translateX(0px)','transition':'none'},0.6)
-                            .fromTo($('.python'),0.8,{'transform':'translateX(-'+(width/3)*2+'px)'},{'transform':'translateX(0px)','transition':'none'},0.8)
-                            .fromTo($('.mysql'),0.8,{'transform':'translateX(-'+(width/3)*3+'px)'},{'transform':'translateX(0px)','transition':'none'},1)
-                            .fromTo($('.php'),0.8,{'transform':'translateX(-'+(width/3)*1+'px)'},{'transform':'translateX(0px)','transition':'none'},1.2)
-                            .fromTo($('.photoshop'),0.8,{'transform':'translateX(-'+(width/3)*2+'px)'},{'transform':'translateX(0px)','transition':'none'},1.4)
-                            .fromTo($('.illustrator'),0.8,{'transform':'translateX(-'+(width/3)*3+'px)'},{'transform':'translateX(0px)','transition':'none'},1.5)
-                            ;
-                            // .to($('.html'),1,{rotationY:-360},0.1)
-                            // .to($('.css'),1,{rotationY:-360},0.2)
-                            // .to($('.js'),1,{rotationY:-360},0.3)
-                            // .to($('.react'),1,{rotationY:-360},0.4)
-                            // .to($('.python'),1,{rotationY:-360},0.5)
-                            // .to($('.mysql'),1,{rotationY:-360},0.6)
-                            // .to($('.php'),1,{rotationY:-360},0.7)
-                            // .to($('.photoshop'),1,{rotationY:-360},0.8)
-                            // .to($('.illustrator'),1,{rotationY:-360},0.9);
-
-                        }
-                        else{
-                            baby_rocket.css({'top':'-100px'});
-                        }
-                        if (slideNumber==4){
-                            const baby_rocket3 = $('.holder.rocket3');
-                            const t4 = new TimelineMax();
-                            t4.to(baby_rocket3,0.5,{'top':'0px'});
-
-                        }
-                       
-                    },
-                    onLeave: function(origin, destination, direction){
-                        if (origin==3){
-                            var slide3_loaded = true;
-                        }
-                        else{
-                            var slide3_loaded = false;
-                        }
-                        
+                    const baby_rocket = $('.holder.rocket2');
+                    // SlideNumber
+                    var slideNumber = $('.fp-section.active').index() + 1;
+                    if (slideNumber==1){
+                        $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": "rgba(219, 210, 210, 0.4)"});
                     }
+                    else{
+                        $('#fp-nav ul li .fp-tooltip').css({"color":"black"});
+                        $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": '#333333'});
+                    }
+                    // $.fn.fullpage.setScrollingSpeed(10000);
+                    console.log('slide 3 loaded'+slide3_loaded);
+                    if (slideNumber==3){
+                        console.log('making slide3 loaded = true');
+                        var slide3_loaded = true;
+                        const width = screen.width;
+                        // alert('ok');
+                        const t3 = new TimelineMax();
+                        const baby_rocket = $('.holder.rocket2');
+                        
+                        
+                        t3.to(baby_rocket,0.8,{'top':'0px'})
+                        .fromTo($('.html'),0.8,{'transform':'translateX(-'+(width/3)*1+'px)'},{'transform':'translateX(0px)','transition':'none'},0)
+                        .fromTo($('.css'),0.8,{'transform':'translateX(-'+(width/3)*2+'px)'},{'transform':'translateX(0px)','transition':'none'},0.2)
+                        .fromTo($('.js'),0.8,{'transform':'translateX(-'+(width/3)*3+'px)'},{'transform':'translateX(0px)','transition':'none'},0.4)
+                        .fromTo($('.react'),0.8,{'transform':'translateX(-'+(width/3)*1+'px)'},{'transform':'translateX(0px)','transition':'none'},0.6)
+                        .fromTo($('.python'),0.8,{'transform':'translateX(-'+(width/3)*2+'px)'},{'transform':'translateX(0px)','transition':'none'},0.8)
+                        .fromTo($('.mysql'),0.8,{'transform':'translateX(-'+(width/3)*3+'px)'},{'transform':'translateX(0px)','transition':'none'},1)
+                        .fromTo($('.php'),0.8,{'transform':'translateX(-'+(width/3)*1+'px)'},{'transform':'translateX(0px)','transition':'none'},1.2)
+                        .fromTo($('.photoshop'),0.8,{'transform':'translateX(-'+(width/3)*2+'px)'},{'transform':'translateX(0px)','transition':'none'},1.4)
+                        .fromTo($('.illustrator'),0.8,{'transform':'translateX(-'+(width/3)*3+'px)'},{'transform':'translateX(0px)','transition':'none'},1.5);
+                        
+                        // .to($('.html'),1,{rotationY:-360},0.1)
+                        // .to($('.css'),1,{rotationY:-360},0.2)
+                        // .to($('.js'),1,{rotationY:-360},0.3)
+                        // .to($('.react'),1,{rotationY:-360},0.4)
+                        // .to($('.python'),1,{rotationY:-360},0.5)
+                        // .to($('.mysql'),1,{rotationY:-360},0.6)
+                        // .to($('.php'),1,{rotationY:-360},0.7)
+                        // .to($('.photoshop'),1,{rotationY:-360},0.8)
+                        // .to($('.illustrator'),1,{rotationY:-360},0.9);
+
+                    }
+                    else{
+                        baby_rocket.css({'top':'-100px'});
+                    }
+                    if (slideNumber==4){
+                        const baby_rocket3 = $('.holder.rocket3');
+                        const t4 = new TimelineMax();
+                        t4.to(baby_rocket3,0.5,{'top':'0px'});
+                    }
+                    
+                },
+                // onLeave: function(origin, destination, direction){
+                //     if (origin==3){
+                //         var slide3_loaded = true;
+                //     }
+                //     else{
+                //         var slide3_loaded = false;
+                //     }
+                    
+                // }
                     
                    
                     
-                }
-            );
+                
+            });
                     
             $('.rocket.normal-rocket.rocket1').on('click',function(e){
                 const t1 = new TimelineMax();
@@ -548,7 +575,7 @@
             // t2.to(rock,2,{"transform":"rotate(45deg) scale(0.15)"},0);
             
             
-        })
+        });
 
         // $('.badge').on('hover',function(e){
         //     // alert('yo');
