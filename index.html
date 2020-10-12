@@ -205,7 +205,7 @@
 
                     <div class="row justify-content-center show viewmywork" style="padding-top:2em">
                         <a href="#section3" style="text-decoration: none;">
-                            <div class="button d-flex align-items-center justify-content-center">
+                            <div class="button viewwork d-flex align-items-center justify-content-center">
                                 <p class="main-title"><span class="fat">View My Work</span></p>
                             </div>
                         </a>
@@ -343,29 +343,58 @@
                             display:block;
                              margin:auto;
                         }
+                        .fp-tableCell{
+                            vertical-align:unset;
+                        }
+                        .padding{
+                            margin-top:50px;
+                        }
+                        .bottom{
+                            
+                            bottom:0;
+                        }
+                        
                     </style>
 
-                    <div class="row throw">
-                        <div class="col throw mx-auto">
-                            <div class="slide">
-                                <img src="whatsmy-1.png" alt="" style="top:0;height:70%;">
+                    <br class="padding">
+                    <div class="slide padding">
+                        <img src="whatsmy-1.png" alt="" style="top:0;height:70%;">
+
+                        <div class="row bottom w-100 px-0 mx-0 ">
+                            <div class="col"></div>
+                            <div class="col justify-content-center mx-auto" style="display:contents;">
+                                <div class="row w-100">
+                                    <a href="#section3" style="text-decoration: none;">
+                                        <div class="button mr-4 other d-flex align-items-center justify-content-center">
+                                            <p class="main-title"><span class="fat">View on Github</span></p>
+                                        </div>
+                                    </a>
+                                    <a href="www.whatsmychord.com" style="text-decoration: none;">
+                                        <div class="button other d-flex align-items-center justify-content-center">
+                                            <p class="main-title"><span class="fat">Launch Site</span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                               
                             </div>
-                            <div class="slide">
-                                <img src="whatsmychordscreen.png" alt="">
-                            </div>
-                            <div class="slide">
-                                <img src="whatsmychordscreen.png" alt="">
-                            </div>
+                            <!-- <div class="col throw justify-content-center mx-auto">
+                                <a href="www.whatsmychord.com" style="text-decoration: none;">
+                                    <div class="button other d-flex align-items-center justify-content-center">
+                                        <p class="main-title"><span class="fat">Launch Site</span></p>
+                                    </div>
+                                </a>
+                            </div> -->
+                            <div class="col"></div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <h1 style="color:white">View on Github</h1>
-                        </div>
-                        <div class="col">
-                            <h1 style="color:white">View Site</h1>
-                        </div>
+                    <div class="slide padding">
+                        <img src="whatsmy-1.png" alt="" style="top:0;height:70%;">
                     </div>
+                    <div class="slide padding">
+                        <img src="whatsmy-1.png" alt="" style="top:0;height:70%;">
+                    </div>
+                       
+                    
                     
                    
                 
@@ -411,7 +440,7 @@
     <script type="text/javascript">
 
         var rocket_clicked=false;
-
+        alert('Your dimensions are: '+screen.width+'x'+screen.height);
         $(document).ready(function() {
             const width=screen.width;
             var slide3_loaded = false;
@@ -523,7 +552,7 @@
                 const newtitle = $('.aboutme-big');
                 const sub = $('.sub-title');
 
-                const button = $('.button');
+                const button = $('.button.viewwork');
                
                 console.log(smoke);
                 // The ,0 just means play the animation at the same time
