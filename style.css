@@ -37,23 +37,56 @@ body{
 .button{
     opacity:0;
     border:1px solid white;
+    
     width:250px;
+    
     height:50px;
     border-radius:1px;
+
+    border-radius:1px;
+    z-index:2000;
 
 }
 .button.other{
     opacity:1;
 }
+
+
 .button:hover{
     background-color:rgba(255, 255, 255, 0.897);
     cursor:pointer;
     transition:0.3s ease-in-out;
     /* border:1px solid black; */
+
+    
 }
 .button:hover .main-title{
     transition:0.3s ease-in-out;
     color:black !important;
+}
+
+.button.trio{
+    opacity:1;
+    border:1px solid white;
+    
+    /* width:250px; */
+    width:50px;
+    height:50px;
+    border-radius:1px;
+
+    border-radius:3px;
+    background-color:rgba(255, 255, 255, 0.897);
+}
+.button.trio:hover{
+    background-color:rgba(255, 255, 255, 0.897);
+    background-color:transparent;
+    cursor:pointer;
+    transition:0.3s ease-in-out;
+    /* border:1px solid black; */
+
+    border:1px solid transparent;
+    filter: invert(1);
+    transition:0.1s ease-in-out;
 }
 
 #section3{
@@ -110,6 +143,8 @@ body{
     width:100%;
     max-height:50%;
     opacity:0;
+    z-index:-1000;
+    /* border:1px solid red; */
 }
 .about{
     position:relative;
@@ -209,6 +244,51 @@ body{
     
 }
 
+.men{
+    width:100%;
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
+
+/*  Width < 376px */
+@media (max-width:420px){
+    @media (min-height:800px){
+        .men{
+            width:250px !important;
+            margin-right: auto!important;
+            margin-left: auto!important;
+        }
+    }
+    /*  Height > 650px */
+    @media (min-height:650px){
+        .men{
+            width:250px !important;
+            margin-right: auto!important;
+            margin-left: auto!important;
+        }
+        .grid{
+            padding-top:15px;
+        
+        }
+        .badge{
+            height:90px;
+        }
+    }
+    /*  Height > 700px */
+    @media (min-height:700px){
+        
+        .grid{
+            padding-top:50px;
+        }
+        .badge{
+            height:100px;
+        }
+        
+    }
+    
+}
+
+
 @media (min-width:321px)  {
     .aboutme_desc{
         padding-top:50px !important;
@@ -217,7 +297,11 @@ body{
         padding-top:30px !important;
     }
     
+    
 }
+
+
+
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
     
 }
@@ -284,7 +368,9 @@ body{
 
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px)and (-webkit-device-pixel-ratio: 3){
+
+/* 
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px){
     .men{
         width:300px !important;
         margin-right: auto!important;
@@ -293,7 +379,7 @@ body{
     .grid{
         padding-top:5px !important;
     }
-}
+} */
 
 
 
