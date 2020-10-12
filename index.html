@@ -440,10 +440,14 @@
     <script type="text/javascript">
 
         var rocket_clicked=false;
-        alert('Your screen dimensions are: '+screen.width+'x'+screen.height);
-        alert('Your window dimensions are: '+window.innerWidth+'x'+window.innerHeight);
+        
 
         $(document).ready(function() {
+
+            $('.me').on('click',function(e){
+                alert('Your screen dimensions are: '+screen.width+'x'+screen.height);
+                alert('Your window dimensions are: '+window.innerWidth+'x'+window.innerHeight);
+            })
             const width=screen.width;
             var slide3_loaded = false;
 
