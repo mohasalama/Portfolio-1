@@ -129,6 +129,28 @@
                     <!-- <span class="dot"></span> -->
                     
                     <img class="me" src="me.png" alt="">
+                    <div class="row icons">
+                        <div class="col"> hello</div>
+                    </div>
+
+                    <div class="row mt-2 icons w-100" style="border:1px solid transparent;">
+                        <div class="row mx-auto">
+                            <div class="button mr-3 trio  other d-flex align-items-center justify-content-center">
+                                <img class="fronticons" src="github-1.svg" alt="">
+                            </div>
+                            <div class="button mr-3 trio other d-flex align-items-center justify-content-center">
+                                <img class="fronticons" src="linkedin.png" alt="">
+                            </div>
+                            <div class="button  trio  other d-flex align-items-center justify-content-center">
+                                <img class="fronticons" src="mail.png" alt="">
+                            </div>
+                        </div>
+                        
+                            
+                    </div>
+                       
+                        
+                   
                    
                     <div class="main-text">
 
@@ -355,6 +377,8 @@
                     </style>
 
                     <br class="padding">
+
+                    <!-- Slide 1 -->
                     <div class="slide padding">
                         <img src="whatsmy-1.png" alt="" style="top:0;height:70%;">
 
@@ -396,12 +420,62 @@
                             <div class="col"></div>
                         </div>
                     </div>
+
+                    <!-- Slide 2 -->
                     <div class="slide padding">
                         <img src="whatsmy-1.png" alt="" style="top:0;height:70%;">
                     </div>
+
+                    <!-- Slide 3 -->
                     <div class="slide padding">
                         <img src="whatsmy-1.png" alt="" style="top:0;height:70%;">
                     </div>
+
+                    <!-- Slide 4 -->
+                    <div class="slide padding">
+                        <img src="whatsmy-1.png" alt="" style="top:0;height:70%;">
+                    </div>
+
+                    <!-- Horizontal Nav Dots -->
+
+                    
+                        <div class="fp-slidesNav fp-bottom" style="top: 0;color: white;width:100%;left:0">
+                            <div class="row mx-auto" style="width:160px">
+                                <div class="col">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="active">
+                                                <!-- <span class="fp-sr-only" style="background-color: white;">1</span> -->
+                                                <span class="dots" style="background-color: white;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="">
+                                                <!-- <span class="fp-sr-only" style="background-color: white;">2</span> -->
+                                                <span class="dots" style="background-color: white;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="">
+                                                <!-- <span class="fp-sr-only" style="background-color: white;">3</span> -->
+                                                <span class="dots" style="background-color: white;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="">
+                                                <!-- <span class="fp-sr-only" style="background-color: white;">4</span> -->
+                                                <span class="dots" style="background-color: white;"></span>
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    
+                    
                        
                     
                     
@@ -441,6 +515,9 @@
         /* .fp-viewing-section2 h1{
             font-size:200px;
         } */
+        .fp-viewing-section2{
+            cursor:pointer;
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
@@ -449,6 +526,48 @@
     <script type="text/javascript">
 
         var rocket_clicked=false;
+
+        function animateRocket(){
+            const t1 = new TimelineMax();
+                
+                
+                const smoke = $('.rocket.normal-rocket.rocket1 .exhaust-fumes li');
+                const flame = $('.rocket.normal-rocket.rocket1 .exhaust-flame');
+                const star  = $('.star');
+                const body = $('.rocket.normal-rocket.rocket1 .rocket-body')
+                const programmer = $('.programmer');
+
+                const baby_rocket = $('.holder.rocket1');
+
+                const title = $('.aboutme');
+                const newtitle = $('.aboutme-big');
+                const sub = $('.sub-title');
+
+                const button = $('.button.viewwork');
+               
+                console.log(smoke);
+                // The ,0 just means play the animation at the same time
+                t1.fromTo($('.rocket.normal-rocket.rocket1'),1,{bottom:'0px'},{bottom:'80%'})
+                .fromTo(smoke,3,{opacity:'1'},{opacity:'0'},0)
+                .fromTo(flame,0.2,{opacity:'1'},{opacity:'0'},0)
+                .fromTo(star,0.1,{opacity:'1'},{opacity:'0'},0)
+                .fromTo(body,1,{opacity:'1'},{opacity:'0'},0)
+                .fromTo(smoke,3,{width:'200px'},{width:'1000px'},0)
+                .fromTo(smoke,3,{height:'200px'},{height:'1000px'},0)
+                .fromTo(smoke,1,{left:'-60px'},{left:'-300px'},0)
+                .to(programmer,2,{"opacity":"1"},1)
+                .to($('.rocket.normal-rocket.rocket1'),0,{display:"none"})
+                .to(title,0,{'opacity':'0'},0)
+                .to(newtitle,3,{'opacity':'1'},0)
+                // .to(title,1,{'font-size':'30px'},0)
+                // .to(title,1,{'top':'10px'},0)
+                .to(sub,4,{'opacity':'1'},0)
+                .to(baby_rocket,0.75,{'top':'4px'},1)
+                .to(button,1,{'opacity':'1'},1.5);
+
+               
+                rocket_clicked=true;
+        }
         
 
         $(document).ready(function() {
@@ -534,6 +653,17 @@
                         const t4 = new TimelineMax();
                         t4.to(baby_rocket3,0.5,{'top':'0px'});
                     }
+                    if (slideNumber==2){
+                        // change to screen.width after
+                        if (window.innerWidth<600){
+                            
+                            // $('.fp-viewing-section2').css('display','none');
+                            $('.section').on('click',function(e){
+                                animateRocket();
+                            });
+
+                        }
+                    }
                     
                 },
                 // onLeave: function(origin, destination, direction){
@@ -552,46 +682,8 @@
             });
                     
             $('.rocket.normal-rocket.rocket1').on('click',function(e){
-                const t1 = new TimelineMax();
                 
-                
-                const smoke = $('.rocket.normal-rocket.rocket1 .exhaust-fumes li');
-                const flame = $('.rocket.normal-rocket.rocket1 .exhaust-flame');
-                const star  = $('.star');
-                const body = $('.rocket.normal-rocket.rocket1 .rocket-body')
-                const programmer = $('.programmer');
-
-                const baby_rocket = $('.holder.rocket1');
-
-                const title = $('.aboutme');
-                const newtitle = $('.aboutme-big');
-                const sub = $('.sub-title');
-
-                const button = $('.button.viewwork');
-               
-                console.log(smoke);
-                // The ,0 just means play the animation at the same time
-                t1.fromTo(this,1,{bottom:'0px'},{bottom:'80%'})
-                .fromTo(smoke,3,{opacity:'1'},{opacity:'0'},0)
-                .fromTo(flame,0.2,{opacity:'1'},{opacity:'0'},0)
-                .fromTo(star,0.1,{opacity:'1'},{opacity:'0'},0)
-                .fromTo(body,1,{opacity:'1'},{opacity:'0'},0)
-                .fromTo(smoke,3,{width:'200px'},{width:'1000px'},0)
-                .fromTo(smoke,3,{height:'200px'},{height:'1000px'},0)
-                .fromTo(smoke,1,{left:'-60px'},{left:'-300px'},0)
-                .to(programmer,2,{"opacity":"1"},1)
-                .to(this,0,{display:"none"})
-                .to(title,0,{'opacity':'0'},0)
-                .to(newtitle,3,{'opacity':'1'},0)
-                // .to(title,1,{'font-size':'30px'},0)
-                // .to(title,1,{'top':'10px'},0)
-                .to(sub,4,{'opacity':'1'},0)
-                .to(baby_rocket,0.75,{'top':'4px'},1)
-                .to(button,1,{'opacity':'1'},1.5);
-
-               
-                rocket_clicked=true;
-
+                animateRocket();
                 
                 
             })
@@ -602,6 +694,7 @@
             // })
         });
 
+        
         $('.holder .baby-rocket').on('click',function(e){
             
             const t2 = new TimelineMax();

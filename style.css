@@ -200,6 +200,10 @@ body{
     transition: all 1.1s ease;
     -webkit-transition: all 1.1s ease;
 }
+
+.dots{
+    background-color:white !important;
+}
 .me{
     height: 250px;
     width: 250px;
@@ -208,6 +212,11 @@ body{
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     
+}
+.icons{
+    position:absolute;
+    top:82%;
+
 }
 .stuff{
     position:absolute;
@@ -250,7 +259,32 @@ body{
     margin-left: auto!important;
 }
 
-/*  Width < 376px */
+.fronticons{
+    width:30px;
+}
+.button.trio{
+    width:30px;
+    height:30px;
+}
+.icons{
+    top:82%;
+}
+.hello{
+    font-size:5em !important;
+}
+#fp-nav{
+    display:none;
+}
+
+.demo .main-title{
+
+}
+
+.sub-title{
+
+}
+
+/*  Width < 420px */
 @media (max-width:420px){
     @media (min-height:800px){
         .men{
@@ -278,6 +312,17 @@ body{
     @media (min-height:700px){
         
         .grid{
+            padding-top:25px;
+        }
+        .badge{
+            height:100px;
+        }
+        
+    }
+    /*  Height > 750px */
+    @media (min-height:750px){
+        
+        .grid{
             padding-top:50px;
         }
         .badge{
@@ -288,7 +333,13 @@ body{
     
 }
 
+@media (max-width:321px){
+    .badge{
+        height:80px;
+    }
+}
 
+/* BIGGER THAN (>) 321 px */
 @media (min-width:321px)  {
     .aboutme_desc{
         padding-top:50px !important;
@@ -296,8 +347,35 @@ body{
     .viewmywork{
         padding-top:30px !important;
     }
+
+}
+/* BIGGER THAN (>) 374 px */
+@media (min-width:375px){
+    .fronticons{
+        width:40px !important;
+    }
+    .button.trio{
+        width:40px;
+        height:40px;
+    }
+    .icons{
+        top:85%;
+    }
+    .main-text{
+        top:400px;
+    }
+    .hello{
+        font-size:5em !important;
+        padding-left:6px;
+    }
     
+    .demo .main-title{
     
+    }
+    
+    .sub-title{
+        font-size:0.75em;
+    }
 }
 
 
@@ -307,11 +385,16 @@ body{
 }
 @media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
 
-@media (min-width: 640px) {
 
-}
 /* Normal desktop  */
 @media (min-width: 768px) {
+    .fp-viewing-section2{
+        cursor:default !important;
+    }
+
+    #fp-nav{
+        display:block;
+    }
     .grid{
         padding-top:0px;
     }
