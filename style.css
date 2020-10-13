@@ -350,7 +350,7 @@ body{
 
 }
 /* BIGGER THAN (>) 374 px */
-@media (min-width:375px){
+@media (min-width:374px){
     .fronticons{
         width:40px !important;
     }
@@ -375,6 +375,35 @@ body{
     
     .sub-title{
         font-size:0.75em;
+    }
+}
+
+/* BIGGER THAN (>) 413 px */
+@media (min-width:413px){
+    .fronticons{
+        width:40px !important;
+    }
+    .button.trio{
+        width:40px;
+        height:40px;
+    }
+    .icons{
+        top:85%;
+    }
+    .main-text{
+        top:400px;
+    }
+    .hello{
+        font-size:6em !important;
+        padding-left:6px;
+    }
+    
+    .demo .main-title{
+        font-size:1.4em;
+    }
+    
+    .sub-title{
+        font-size:0.88em;
     }
 }
 
@@ -643,5 +672,6 @@ body{
     font-display: swap;
 }
 /* =================== FONTS =================== */
+
 
 
