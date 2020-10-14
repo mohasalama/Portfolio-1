@@ -19,8 +19,21 @@ body{
     background-color: #f9f1e9;
     opacity:0;
 }
+.back2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #f9f1e9;
+    opacity:1;
+    z-index:-1;
+}
 .contain{
     object-fit:contain;
+}
+
+.programs{
+    text-align:center;
+    font-size:5vw;
 }
 
 .container-fluid{
@@ -157,6 +170,7 @@ body{
 .about{
     position:relative;
     font-size:20px !important;
+    color:black !important;
 }
 .aboutme{
     /* top:10%; */
@@ -278,7 +292,7 @@ body{
     top:82%;
 }
 .hello{
-    font-size:5em !important;
+    font-size:5em;
 }
 #fp-nav{
     display:none;
@@ -295,12 +309,16 @@ body{
 
 }
 
+.main-title.hello:hover{
+    cursor:url('/twit.png') 60 60, auto;
+    
+}
 .demo .main-title{
 
 }
 
 .sub-title{
-    color:black !important;
+    
 }
 
 /*  Width < 420px */
@@ -425,8 +443,17 @@ body{
         font-size:0.88em;
     }
 }
+.skills{
+    color:black !important;
+}
+.baby-rocket{
+    transform:scale(0.15) !important;
+}
 
-
+.rocket2{
+    left:-5%;
+    top:5% !important;
+}
 
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
     
@@ -434,7 +461,7 @@ body{
 @media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
 
 
-/* Normal desktop  */
+/* Normal desktop   > 768px */
 @media (min-width: 768px) {
     .fp-viewing-section2{
         cursor:default !important;
@@ -497,6 +524,109 @@ body{
 
 @media (min-width: 1280px) {
 
+}
+
+@media (min-width: 1366px) {
+    .hello{
+        font-size:6em !important;
+        padding-left:6px;
+    }
+    
+    
+    .intro{
+        font-size:1.45em !important;
+    }
+    
+    .sub-title{
+        font-size:.9em !important;
+    }
+
+    .about{
+        font-size:1.5em !important;
+    }
+    .aboutme-big{
+        font-size:3em !important;
+        white-space: nowrap;
+    }
+
+    .baby-rocket{
+        transform: scale(0.25) !important;
+    }
+    .aboutme-rocket{
+        left:120% !important;
+        top:-3px !important;;
+    }
+    .skills{
+        font-size:3em !important;
+    }
+    .rocket2{
+        left:18% !important;
+        top:3% !important;
+    }
+    
+}
+
+
+/* WIDTH BIGGER THAN > 1440PX */
+@media (min-width: 1440px) {
+    .main-text{
+        top:400px;
+    }
+    .hello{
+        font-size:8em !important;
+        padding-left:6px;
+    }
+    
+    
+    .intro{
+        font-size:1.9em !important;
+    }
+    
+    .sub-title{
+        font-size:1.2em !important;
+    }
+}
+@media (min-width: 1600px) {
+    .main-text{
+        top:400px;
+    }
+    .hello{
+        font-size:8em !important;
+        padding-left:6px;
+    }
+    
+    .demo .main-title{
+        font-size:1.9em;
+    }
+    .main-title .intro{
+        font-size:3em;
+    }
+    
+    .sub-title{
+        font-size:1.2em;
+    }
+}
+
+@media (min-width: 1920px) {
+    .icons{
+        top:95%;
+    }
+    .main-text{
+        top:450px;
+    }
+    .hello{
+        font-size:12em !important;
+        padding-left:6px;
+    }
+    
+    
+    .intro{
+        font-size:2.9em !important;
+    }
+    
+    .sub-title{
+        font-size:1.9em !important;
+    }
 }
 
 
