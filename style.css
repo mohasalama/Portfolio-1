@@ -11,7 +11,14 @@ body{
     max-height:100vh;
     overflow:hidden;
 }
+.back{
 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #f9f1e9;
+    opacity:0;
+}
 .contain{
     object-fit:contain;
 }
@@ -125,6 +132,7 @@ body{
 }
 .aboutme-big{
     opacity:0;
+    color:black !important;
    
 }
 .rocket2{
@@ -143,7 +151,7 @@ body{
     width:100%;
     max-height:50%;
     opacity:0;
-    z-index:-1000;
+    /* z-index:-1000; */
     /* border:1px solid red; */
 }
 .about{
@@ -275,13 +283,24 @@ body{
 #fp-nav{
     display:none;
 }
+.viewwork{
+    border:1px solid black !important;
+}
+.viewwork:hover{
+    border:1px solid black !important;
+
+}
+.viewbutton{
+    color:black !important;
+
+}
 
 .demo .main-title{
 
 }
 
 .sub-title{
-
+    color:black !important;
 }
 
 /*  Width < 420px */

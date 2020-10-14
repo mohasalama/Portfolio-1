@@ -23,7 +23,7 @@
 		.large-header{
 			position: relative;
 			width: 100%;
-			background: #111;
+			background: #f9f1e9;
 			overflow: hidden;
 			background-size: cover;
 			background-position: center center;
@@ -37,13 +37,13 @@
         .demo .large-header-flipped{
             position: relative;
 			width: 100%;
-			background: #111;
+			background:#f9f1e9;
 			overflow: hidden;
 			background-size: cover;
 			background-position: center center;
 			z-index: 1;
             background-image: url("space-flipped.jpg");
-            background-color:rgb(8, 8, 8);
+            /* background-color:rgb(8, 8, 8); */
         }
 
 		.main-title{
@@ -192,7 +192,7 @@
         </div>
         <div class="section" data-anchor="section2">
             <div id="large-header" class="large-header-flipped" style="min-height: -webkit-fill-available;height:100%">
-
+                    <div class="back"></div>
                     <h1 class="main-title fat aboutme">About me</h1>
                     <div class="col justify-content-center mx-auto" style="height:50px;width:300px">
                         <h1 class="main-title fat aboutme-big page_headers d-flex align-items-center justify-content-center">About me</h1>
@@ -228,7 +228,7 @@
                     <div class="row justify-content-center show viewmywork" style="padding-top:2em">
                         <a href="#section3" style="text-decoration: none;">
                             <div class="button viewwork d-flex align-items-center justify-content-center">
-                                <p class="main-title"><span class="fat">View My Work</span></p>
+                                <p class="main-title"><span class="fat viewbutton">View My Work</span></p>
                             </div>
                         </a>
                     </div>
@@ -532,6 +532,7 @@
                 
                 
                 const smoke = $('.rocket.normal-rocket.rocket1 .exhaust-fumes li');
+                const last_smoke = $('.rocket.normal-rocket.rocket1 .exhaust-fumes li:nth-child(6)')
                 const flame = $('.rocket.normal-rocket.rocket1 .exhaust-flame');
                 const star  = $('.star');
                 const body = $('.rocket.normal-rocket.rocket1 .rocket-body')
@@ -544,6 +545,8 @@
                 const sub = $('.sub-title');
 
                 const button = $('.button.viewwork');
+
+                const back2 = $('.back');
                
                 console.log(smoke);
                 // The ,0 just means play the animation at the same time
@@ -554,6 +557,12 @@
                 .fromTo(body,1,{opacity:'1'},{opacity:'0'},0)
                 .fromTo(smoke,3,{width:'200px'},{width:'1000px'},0)
                 .fromTo(smoke,3,{height:'200px'},{height:'1000px'},0)
+
+                .fromTo(last_smoke,3,{width:'200px'},{width:'5000px'},0)
+                .fromTo(last_smoke,3,{height:'200px'},{height:'5000px'},0)
+                .to(last_smoke,0,{left:'10000px'},0)
+                .to(back2,3,{'opacity':'1'},0)
+
                 .fromTo(smoke,1,{left:'-60px'},{left:'-300px'},0)
                 .to(programmer,2,{"opacity":"1"},1)
                 .to($('.rocket.normal-rocket.rocket1'),0,{display:"none"})
