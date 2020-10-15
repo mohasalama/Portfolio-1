@@ -318,8 +318,9 @@ body{
     cursor:url('/twit.png') 60 60, auto;
     
 }
-.demo .main-title{
-
+.hello{
+    font-size:5em !important;
+    padding-left:6px;
 }
 
 .sub-title{
