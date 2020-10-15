@@ -133,7 +133,7 @@
                         <div class="col"> hello</div>
                     </div>
 
-                    <div class="row mt-2 icons w-100" style="border:1px solid transparent;">
+                    <div class="row mt-2 icons w-100" >
                         <div class="row mx-auto">
                             <div class="button mr-3 trio  other d-flex align-items-center justify-content-center">
                                 <img class="fronticons" src="github-1.svg" alt="">
@@ -230,12 +230,14 @@
                     <div class="row justify-content-center show viewmywork" style="padding-top:2em">
                         <a href="#section3" style="text-decoration: none;">
                             <div class="button viewwork d-flex align-items-center justify-content-center">
-                                <p class="main-title"><span class="fat viewbutton">View My Work</span></p>
+                                <p class="main-title box d-block my-auto"><span class="fat viewbutton">View My Work</span></p>
                             </div>
                         </a>
                     </div>
+                    <div class="hold">
+                        <img class="programmer show d-flex mx-auto" src="programmer.svg" alt="">
 
-                    <img class="programmer show" src="programmer.svg" alt="">
+                    </div>
 
                     
                     
@@ -687,6 +689,8 @@
                             // $('.fp-viewing-section2').css('display','none');
                             $('.section').on('click',function(e){
                                 animateRocket();
+                                $('.fp-viewing-section2').attr('style', 'cursor: default !important');
+
                             });
 
                         }
@@ -711,6 +715,7 @@
             $('.rocket.normal-rocket.rocket1').on('click',function(e){
                 
                 animateRocket();
+                $('.fp-viewing-section2').attr('style', 'cursor: default !important');
                 
                 
             })
