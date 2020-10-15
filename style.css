@@ -32,8 +32,11 @@ body{
 }
 
 .programs{
-    text-align:center;
-    font-size:5vw;
+    /* text-align:center; */
+    font-size:40px;
+    font-weight:300;
+    /* text-align: center; */
+    word-wrap: break-word;
 }
 
 .container-fluid{
@@ -160,9 +163,10 @@ body{
 }
 .programmer{
     position:absolute;
-    bottom:0;
+    bottom:20px;
     width:100%;
-    max-height:50%;
+    
+    max-height:35%;
     opacity:0;
     /* z-index:-1000; */
     /* border:1px solid red; */
@@ -171,6 +175,7 @@ body{
     position:relative;
     font-size:20px !important;
     color:black !important;
+    text-align:left !important;
 }
 .aboutme{
     /* top:10%; */
