@@ -180,7 +180,7 @@ body{
 .aboutme{
     /* top:10%; */
     /* font-size:3rem !important; */
-    top:50%;
+    top:40%;
     
 }
 
@@ -634,6 +634,14 @@ body{
         font-size:1.9em !important;
     }
 }
+
+
+/* HEIGHT MEDIA QUERIES FOR ROCKET */
+
+ 
+ @media (min-height: 320px){
+
+ }
 
 
 /* 
