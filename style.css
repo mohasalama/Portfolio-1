@@ -327,6 +327,10 @@ body{
     padding-top:15%;
 }
 
+.allprograms{
+    padding-left: 50px !important;
+    padding-top: 40px !important;
+}
 
 .men{
     width:100%;
@@ -410,6 +414,9 @@ body{
         }
         .about{
             padding-top:40px;
+        }
+        .programs{
+            font-size:3.5em;
         }
         
     }
@@ -498,6 +505,13 @@ body{
     
     .sub-title{
         font-size:0.88em;
+    }
+    .allprograms{
+        padding-left:60px !important;
+        
+    }
+    .programs{
+        font-size:3em;
     }
 }
 .skills{
