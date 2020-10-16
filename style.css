@@ -205,7 +205,7 @@ body{
     /* border:1px solid red; */
     padding-left:30px !important;
     padding-right:30px !important;
-    padding-top:30px !important;
+    /* padding-top:30px !important; */
 
 }
 
@@ -419,7 +419,7 @@ body{
 /* BIGGER THAN (>) 321 px */
 @media (min-width:321px)  {
     .aboutme_desc{
-        padding-top:50px !important;
+        padding-top:30px !important;
     }
     .viewmywork{
         padding-top:30px !important;
