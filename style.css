@@ -71,6 +71,9 @@ body{
 
 }
 
+.viewbutton{
+    font-size:15px !important;
+}
 .mybutton{
     opacity:0;
     margin:0;
@@ -81,12 +84,18 @@ body{
     height:50px;
 
     color:white;
-    border:1px solid black;
+    border:1px solid rgba(0, 0, 0, 0.438);
     border-radius:1px;
+
+    width:200px;
+    height:40px;
     
 }
 .button.other{
     opacity:1;
+}
+.viewmywork{
+    padding-top:40px !important;
 }
 
 
@@ -181,7 +190,7 @@ body{
     /* bottom:20px; */
     width:100%;
     
-    max-height:35%;
+    max-height:35vh;
     opacity:0;
     /* z-index:-1000; */
     /* border:1px solid red; */
@@ -189,10 +198,12 @@ body{
     width:70%;
     /* border:1px solid red; */
 }
-
+.mybutton:hover{
+    
+}
 .hold{
     position:absolute;
-    bottom:20px;
+    bottom:13px;
     width:100%;
     
 }
@@ -394,6 +405,12 @@ body{
         .badge{
             height:100px;
         }
+        .viewmywork{
+            padding-top:130px !important;
+        }
+        .about{
+            padding-top:40px;
+        }
         
     }
     /*  Height > 750px */
@@ -422,7 +439,7 @@ body{
         padding-top:30px !important;
     }
     .viewmywork{
-        padding-top:30px !important;
+        padding-top:30px;
     }
 
 }
@@ -503,9 +520,9 @@ body{
 
 /* Normal desktop   > 768px */
 @media (min-width: 768px) {
-    .fp-viewing-section2{
+    /* .fp-viewing-section2{
         cursor:default !important;
-    }
+    } */
 
     #fp-nav{
         display:block;
@@ -540,8 +557,13 @@ body{
         font-size: 2.2em;
         letter-spacing: 0.1em;
     }
-}
+    .about{
+        padding-left:15% !important;
+        padding-right:15% !important;
+    }
 
+}
+/* bigger than 961px */
 @media (min-width:961px)  { 
     .arrow-box{
         position:absolute;
@@ -553,6 +575,10 @@ body{
         /* margin-top:100px; */
         cursor:pointer;
         bottom:15px;
+    }
+    .about{
+        padding-left:30% !important;
+        padding-right:25% !important;
     }
 
 }
@@ -603,6 +629,9 @@ body{
         left:18% !important;
         top:3% !important;
     }
+    .aboutme{
+        top:50%;
+    }
     
 }
 
@@ -625,6 +654,16 @@ body{
     .sub-title{
         font-size:1.2em !important;
     }
+    .aboutme_desc {
+        padding-top: 70px !important;
+    }
+    .viewmywork {
+        padding-top: 80px !important;
+    }
+    .about{
+        font-size:1.6em !important;
+    }
+
 }
 @media (min-width: 1600px) {
     .main-text{
@@ -666,6 +705,24 @@ body{
     
     .sub-title{
         font-size:1.9em !important;
+    }
+
+    .aboutme_desc {
+        padding-top: 140px !important;
+    }
+    .viewmywork {
+        padding-top: 80px !important;
+    }
+    .about{
+        font-size:2em !important;
+    }
+    .viewbutton {
+        font-size: 25px !important;
+    }
+    .mybutton {
+  
+        width: 270px;
+        height: 60px;
     }
 }
 
