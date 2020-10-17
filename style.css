@@ -35,16 +35,48 @@ body{
     opacity:1;
     z-index:-1;
 }
+
+.back4{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #95ce9e;
+    opacity:1;
+    z-index:-1;
+}
+
+.getintouch{
+    font-family: 'Raleway-SemiBold';
+}
 .contain{
     object-fit:contain;
+}
+
+.headholder{
+    width: 180px;
+    position: absolute;
+    right: 50px;
+}
+
+.headholderskills{
+    width: 200px;
+    position: absolute;
+    right: 50px;
+}
+.headholderproj{
+    position:absolute;
+    right:50px;
+    width: 340px;
+    white-space: nowrap;
 }
 
 .programs{
     /* text-align:center; */
     font-size:30px;
-    font-weight:300;
+    font-weight:350;
     /* text-align: center; */
     word-wrap: break-word;
+    color:#3b3f42;
 }
 
 .container-fluid{
@@ -177,18 +209,19 @@ body{
     top: 0px;
     padding-left:170px;
     top:-100px;
+
+    right:15px;
+    padding-left:0;
 }
 .aboutme-big{
     opacity:0;
-    color:black !important;
+    color:#3b3f42 !important;
    
 }
 .rocket2{
     top:-100px;
 }
-.rocket3{
-    top:-100px;
-}
+
 .page_headers{
     font-size:30px !important;
     top:10px;
@@ -218,7 +251,7 @@ body{
 .about{
     position:relative;
     font-size:19px !important;
-    color:black !important;
+    color:#3b3f42 !important;
     text-align:left !important;
     font-weight:600;
     /* border:1px solid red; */
@@ -384,7 +417,23 @@ body{
     
 }
 
-
+.screen{
+   transform:scale(0.5);
+   top:0;
+}
+.video{
+    position: absolute;
+    top: 0px;
+    transform: translate(12px,56px);
+    
+}
+.rocket3{
+    top:-100px;
+    position: absolute !important;
+}
+.recentproj{
+    font-size:25px !important;
+}
 
 /*  Width < 420px */
 @media (max-width:420px){
@@ -453,7 +502,7 @@ body{
 /* BIGGER THAN (>) 321 px */
 @media (min-width:321px)  {
     .aboutme_desc{
-        padding-top:30px !important;
+        padding-top:70px !important;
     }
     .viewmywork{
         padding-top:30px;
@@ -461,6 +510,11 @@ body{
     .programs{
         font-size:35px;
     }
+    .headholder{
+        width: 270px;
+        white-space: nowrap;
+    }
+   
 
 }
 /* BIGGER THAN (>) 374 px */
@@ -489,6 +543,14 @@ body{
     
     .sub-title{
         font-size:0.75em;
+    }
+
+    .allprograms{
+        padding-left:60px !important;
+        
+    }
+    .programs{
+        font-size:40px !important;
     }
 }
 
@@ -528,7 +590,7 @@ body{
     }
 }
 .skills{
-    color:black !important;
+    color:#3b3f42 !important;
 }
 .baby-rocket{
     transform:scale(0.15) !important;
@@ -590,9 +652,38 @@ body{
     }
     .allprograms{
         column-count:2;
+        padding-left: 270px !important;
+        margin-left: -60px;
+        padding-top: 70px !important;
+        line-height: 1.3;
+
+        padding-left: 33% !important;
+        margin-left: -8%;
     }
+    .programs {
+        font-size: 2.5em !important;
+        transition: all 0.25s ease-in-out;
+        line-height:unset !important;
+
+        
+    
+    }
+    /* .programs:hover{
+        font-size: 4em !important;
+        line-height:2em;
+        transition: all 0.25s ease-in-out;
+
+    } */
   
 
+}
+@media (min-width:950px)  { 
+
+    .allprograms{
+   
+        padding-left: 28% !important;
+        margin-left: 1%;
+    }
 }
 /* bigger than 961px */
 @media (min-width:961px)  { 
@@ -656,12 +747,36 @@ body{
     .skills{
         font-size:3em !important;
     }
+    .recentproj{
+        font-size:3em !important;
+
+    }
     .rocket2{
         left:18% !important;
         top:3% !important;
     }
     .aboutme{
         top:50%;
+    }
+    .holder{
+        right: -114px;
+    }
+    .headholder{
+        right: 104px;
+    }
+    .headholderskills{
+        right: 104px;
+    }
+   
+    .headholderproj {
+        right: 200px;
+    }
+    .holder.rocket1{
+        right:25px;
+        
+    }
+    .aboutme_desc {
+        padding-top: 90px !important;
     }
     
 }
@@ -686,7 +801,7 @@ body{
         font-size:1.2em !important;
     }
     .aboutme_desc {
-        padding-top: 70px !important;
+        padding-top: 90px !important;
     }
     .viewmywork {
         padding-top: 80px !important;
@@ -699,6 +814,21 @@ body{
     }
     .allprograms {
         padding-top: 80px !important;
+    }
+
+    .allprograms {
+        padding-top: 130px !important;
+        /* padding-left: 35% !important; */
+        padding-left: 39% !important;
+        margin-left: -5%;
+    }
+    .programs {
+        font-size: 2.5em !important;
+        transition: all 0.25s ease-in-out;
+        line-height:unset !important;
+
+        
+    
     }
 
 }
@@ -720,6 +850,21 @@ body{
     
     .sub-title{
         font-size:1.2em;
+    }
+
+    .allprograms {
+        padding-top: 130px !important;
+        /* padding-left: 35% !important; */
+        padding-left: 36% !important;
+        margin-left: -1%;
+    }
+    .programs {
+        font-size: 3em !important;
+        transition: all 0.25s ease-in-out;
+        line-height:unset !important;
+
+        
+    
     }
 }
 
@@ -761,14 +906,19 @@ body{
         width: 270px;
         height: 60px;
     }
-    .programs {
-        font-size: 6em;
-    }
     .allprograms {
-        padding-top: 140px !important;
-        padding-left:0px !important;
-        padding-right:0px !important;
-        column-gap: 200px;
+        padding-top: 200px !important;
+        /* padding-left: 35% !important; */
+        padding-left: 19% !important;
+        margin-left: 16%;
+    }
+    .programs {
+        font-size: 4em !important;
+        transition: all 0.25s ease-in-out;
+        line-height:unset !important;
+
+        
+    
     }
 }
 
