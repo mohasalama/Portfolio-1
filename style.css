@@ -482,7 +482,8 @@ body{
 
   #bg-2 {
     /* The image used */
-    background-image: url("philosophycove.png");
+    /* background-image: url("philosophycove.png"); */
+    background-image: url("whatsmyjudge.jpg");
   
     /* Full height */
     height: 100%;

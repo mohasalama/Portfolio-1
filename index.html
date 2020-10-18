@@ -621,28 +621,7 @@
 
         var rocket_clicked=false;
 
-        function slide1_cond(){
-            if (window.innerWidth<1024){
-                $(".recentproj").text("WHATS MY CHORD");
-                $(".recentproj").addClass('mobile-title1');
-            }
-            else{
-                $(".recentproj").text("PROJECTS");
-                $(".recentproj").removeClass('mobile-title1');
-
-            }
-        }
-        function slide2_cond(){
-            if (window.innerWidth<1024){
-                $(".recentproj").text("WHATS MY CHORD");
-                $(".recentproj").addClass('mobile-title1');
-            }
-            else{
-                $(".recentproj").text("PROJECTS");
-                $(".recentproj").removeClass('mobile-title1');
-
-            }
-        }
+       
 
 
         function animateRocket(){
@@ -813,27 +792,27 @@
                     console.log(section,origin,destination);
                     
                     if (destination==0){
-                        if (mobile){
-                            $(".recentproj").text("Whats My Chord");
-                        }
+                        
+                        $(".recentproj").text("Whats My Chord");
+                        
                     }
                     else if (destination==1){
                         // $(".back3").css({'background-color':'#95ce9e'});
-                        if (mobile){
-                            $(".recentproj").text("The Philosophy Cove");
-                        }
+                        
+                        $(".recentproj").text("The Philosophy Cove");
+                        
                     }
                     else if (destination==2){
                         // $(".back3").css({'background-color':'#ceb895'});
-                        if (mobile){
-                            $(".recentproj").text("The Warsha Shop");
-                        }
+                        
+                        $(".recentproj").text("The Warsha Shop");
+                        
                     }
                     else{
                         // $(".back3").css({'background-color':'#95ce9e'});
-                        if (mobile){
-                            $(".recentproj").text("Netflix Browser");
-                        }
+                        
+                        $(".recentproj").text("Netflix Browser");
+                        
                     }
                 }
                 // onLeave: function(origin, destination, direction){
