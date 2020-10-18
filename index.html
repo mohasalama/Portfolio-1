@@ -453,9 +453,9 @@
                     </style>
                     <!-- Slide 1 -->
                     <div class="slide" id="bg-1">
-                      
-                        <!-- <img class="whatsmy" src="whatsmychord.png" alt=""> -->
-                        <!-- <div class="bg"></div> -->
+                        <!-- <h1 class="title-left">WHATSMYCHORD</h1>
+                        <p class="desc-left">A guitar chord detection website where you input the notes of a unknown chord onto a fretboard and the algorithm produces its name and different ways to play it up and down the fretboard</p>
+                         -->
                     </div>
 
                     <div class="slide" id="bg-2">
@@ -590,6 +590,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
+        
 
         // PRELOAD
 
@@ -619,6 +620,30 @@
 
 
         var rocket_clicked=false;
+
+        function slide1_cond(){
+            if (window.innerWidth<1024){
+                $(".recentproj").text("WHATS MY CHORD");
+                $(".recentproj").addClass('mobile-title1');
+            }
+            else{
+                $(".recentproj").text("PROJECTS");
+                $(".recentproj").removeClass('mobile-title1');
+
+            }
+        }
+        function slide2_cond(){
+            if (window.innerWidth<1024){
+                $(".recentproj").text("WHATS MY CHORD");
+                $(".recentproj").addClass('mobile-title1');
+            }
+            else{
+                $(".recentproj").text("PROJECTS");
+                $(".recentproj").removeClass('mobile-title1');
+
+            }
+        }
+
 
         function animateRocket(){
             const t1 = new TimelineMax();
@@ -673,6 +698,10 @@
         
 
         $(document).ready(function() {
+
+            $(window).on('resize', function(){
+                slide1_cond();
+            })
 
             $('.me').on('click',function(e){
                 alert('Your screen dimensions are: '+screen.width+'x'+screen.height);
@@ -754,6 +783,8 @@
                         const baby_rocket3 = $('.holder.rocket3');
                         const t4 = new TimelineMax();
                         t4.to(baby_rocket3,0.5,{'top':'0px'});
+
+                        slide1_cond();
                     }
                     if (slideNumber==2){
                         // change to screen.width after
@@ -775,14 +806,34 @@
                 },
                 afterSlideLoad: function(section, origin, destination, direction){
                     console.log(destination);
-                    if (destination==1){
-                        $(".back3").css({'background-color':'#95ce9e'});
+                    var screen_width = window.innerWidth;
+                    if (screen_width<1024){
+                        var mobile=true;
+                    }
+                    console.log(section,origin,destination);
+                    
+                    if (destination==0){
+                        if (mobile){
+                            $(".recentproj").text("Whats My Chord");
+                        }
+                    }
+                    else if (destination==1){
+                        // $(".back3").css({'background-color':'#95ce9e'});
+                        if (mobile){
+                            $(".recentproj").text("The Philosophy Cove");
+                        }
                     }
                     else if (destination==2){
-                        $(".back3").css({'background-color':'#ceb895'});
+                        // $(".back3").css({'background-color':'#ceb895'});
+                        if (mobile){
+                            $(".recentproj").text("The Warsha Shop");
+                        }
                     }
                     else{
-                        $(".back3").css({'background-color':'#95ce9e'});
+                        // $(".back3").css({'background-color':'#95ce9e'});
+                        if (mobile){
+                            $(".recentproj").text("Netflix Browser");
+                        }
                     }
                 }
                 // onLeave: function(origin, destination, direction){

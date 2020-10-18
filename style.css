@@ -519,6 +519,33 @@ body{
   }
 
 
+  .title-left{
+    font-family: 'Raleway';
+    color: #f9f1e9;
+    font-size: 3em;
+    /* top: 0; */
+    position: absolute;
+    top: 20%;
+    left: 70px;
+  }
+  .desc-left{
+    position: absolute;
+    top: 26%;
+    left: 113px;
+    font-family: 'Raleway';
+    font-size: 2em;
+    width: 427px;
+  }
+
+  .mobile-title1{
+    font-size: 22px !important;
+    transform: translateX(-20px) !important;
+  }
+  .mobile-title2{
+    font-size: 18px !important;
+    transform: translateX(-29px) translateY(3px) !important;
+  }
+
 /* ------------------------loader------------------------- */
 .loader-wrapper{
     position:absolute;
@@ -863,7 +890,6 @@ body{
     }
 
 }
-
 
 @media (min-width: 1024px) {
 
