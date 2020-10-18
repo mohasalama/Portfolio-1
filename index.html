@@ -370,7 +370,7 @@
                 <div class="back3"></div>
                 <h1 class="main-title fat aboutme" style="opacity:0;">PLACEHOLDER</h1>
                 <div class="col justify-content-center headholderproj mx-auto" style="height:50px;">
-                    <h1 class="main-title fat page_headers recentproj d-flex align-items-center justify-content-center">RECENT PROJECTS</h1>
+                    <h1 class="main-title fat page_headers recentproj d-flex align-items-center justify-content-center">PROJECTS</h1>
 
                     <!-- <h1 class="main-title fat page_headers d-flex align-items-center justify-content-center" style="white-space: nowrap;">RECENT PROJECTS</h1> -->
                     <span class="holder rocket3 d-flex justify-content-center">
@@ -450,29 +450,17 @@
                     </div>
                     
                     <div class="slide padding">
-                        <div class="row w-100 mx-0 px-0" style="border:1px solid red;">
-                            <div class="col d-flex mx-auto px-0 justify-content-center" style="border:1px solid red;">
-
-                                <div class="screen">
-                                    <!-- <img src="/desktop.png" alt="" width="100%">
-                                    <div class="video">
-                                        <video style="border-radius:5px;width:98%;" autoplay muted loop>
-                                            <source src="/clip0002.mp4" type="video/mp4">
-                                        </video>
-                                    </div> -->
-                                    <div class="video" width="100%">
-                                        <video autoplay muted loop>
-                                            <source src="/final_5f8b08af28e387005b4f0f48_484071.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                    
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
+                      
+                        <h1>hey</h1>
                     </div>
-
+                    <div class="slide padding">
+                      
+                        <h1>hey2</h1>
+                    </div>
+                    <div class="slide padding">
+                      
+                        <h1>hey3</h1>
+                    </div>
 
                   
 
@@ -727,6 +715,21 @@
                     }
                     
                 },
+                onSlideLeave: function(section, origin, destination, direction){
+                    // console.log(section,origin,destination,direction);
+                },
+                afterSlideLoad: function(section, origin, destination, direction){
+                    console.log(destination);
+                    if (destination==1){
+                        $(".back3").css({'background-color':'#95ce9e'});
+                    }
+                    else if (destination==2){
+                        $(".back3").css({'background-color':'#ceb895'});
+                    }
+                    else{
+                        $(".back3").css({'background-color':'#95ce9e'});
+                    }
+                }
                 // onLeave: function(origin, destination, direction){
                 //     if (origin==3){
                 //         var slide3_loaded = true;
