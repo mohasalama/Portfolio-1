@@ -461,6 +461,26 @@ body{
     font-size:30px !important;
 }
 
+.whatsmy-title {
+    font-size: 22px !important;
+    top: 11px !important;
+    left: -12px;
+    
+}
+.whatsmy-smaller{
+    font-size: 17px !important;
+    top: 14px !important;
+    left:-12px;
+   
+}
+/* 
+.whatsmy-title{
+    font-size:30px !important;
+}
+.whatsmy-title{
+    font-size:30px !important;
+} */
+
 .subtouch{
     position:absolute;
     top:50%;
@@ -627,6 +647,7 @@ body{
 /* ------------------------loader (END) ------------------------- */
 
 
+
 /*  Width < 420px */
 @media (max-width:420px){
     @media (min-height:800px){
@@ -743,6 +764,18 @@ body{
     }
     .programs{
         font-size:40px !important;
+    }
+
+    .whatsmy-title {
+        font-size: 23px !important;
+        top: 11px !important;
+        left: -29px;
+        
+    }
+    .whatsmy-smaller{
+        font-size: 20px !important;
+        top: 12px !important;
+        left: -32px;
     }
 }
 
