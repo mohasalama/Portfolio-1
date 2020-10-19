@@ -469,7 +469,8 @@ body{
 }
 #bg-1 {
     /* The image used */
-    background-image: url("whatsmychord.png");
+    background-image: url("whatsmychord.jpg");
+
   
     /* Full height */
     height: 100%;
@@ -482,8 +483,7 @@ body{
 
   #bg-2 {
     /* The image used */
-    /* background-image: url("philosophycove.png"); */
-    background-image: url("whatsmyjudge.jpg");
+    background-image: url("thephilosophycove.jpg");
   
     /* Full height */
     height: 100%;
@@ -496,7 +496,8 @@ body{
 
   #bg-3 {
     /* The image used */
-    background-image: url("warshaproject.png");
+    background-image: url("warshashop.jpg");
+
   
     /* Full height */
     height: 100%;
@@ -508,7 +509,8 @@ body{
   }
   #bg-4 {
     /* The image used */
-    background-image: url("netflixbrowser.png");
+    background-image: url("netflixbrowser.jpg");
+
   
     /* Full height */
     height: 100%;
