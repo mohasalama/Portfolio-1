@@ -495,54 +495,25 @@ body{
     /* The image used */
     background-image: url("whatsmychord.jpg");
 
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
   }
 
   #bg-2 {
     /* The image used */
     background-image: url("thephilosophycove.jpg");
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
   }
 
   #bg-3 {
     /* The image used */
     background-image: url("warshashop.jpg");
 
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
   }
   #bg-4 {
     /* The image used */
     background-image: url("netflixbrowser.jpg");
 
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
 
@@ -571,6 +542,9 @@ body{
   .mobile-title2{
     font-size: 18px !important;
     transform: translateX(-29px) translateY(3px) !important;
+  }
+  .slide{
+      background-size:cover;
   }
 
 /* ------------------------loader------------------------- */
@@ -713,7 +687,20 @@ body{
 }
 
 /* BIGGER THAN (>) 321 px */
-@media (min-width:321px)  {
+@media (min-width:320px)  {
+    #bg-1{
+        background-position: right -374px bottom 0px;
+    }
+    #bg-2{
+        background-position:right -627px bottom 0px;
+    }
+    #bg-3{
+        background-position:right -319px bottom 0px;
+    }
+
+    #bg-4{
+        background-position:right -662px bottom 0px;
+    }
     .aboutme_desc{
         padding-top:70px !important;
     }
@@ -730,8 +717,26 @@ body{
    
 
 }
+
+@media (min-width:360px){
+    #bg-1{
+        background-position: right -374px bottom 0px;
+    }
+    #bg-2{
+        background-position:right -610px bottom 0px;
+    }
+    #bg-3{
+        background-position:right -338px bottom 0px;
+    }
+
+    #bg-4{
+        background-position:right -718px bottom 0px;
+    }
+}
 /* BIGGER THAN (>) 374 px */
 @media (min-width:374px){
+
+
     .fronticons{
         width:40px !important;
     }
@@ -837,6 +842,43 @@ body{
     /* .fp-viewing-section2{
         cursor:default !important;
     } */
+
+    #bg-1 {
+        /* Full height */
+        height: 100%;
+      
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    
+      #bg-2 {
+        height: 100%;
+      
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    
+      #bg-3 {
+
+        height: 100%;
+      
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #bg-4 {
+        height: 100%;
+      
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
     #fp-nav{
         display:block;
