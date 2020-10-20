@@ -227,7 +227,7 @@
                     
 
                     <div class="row justify-content-center show viewmywork" style="padding-top:2em">
-                        <a href="#section3" style="text-decoration: none;">
+                        <a href="#section4" style="text-decoration: none;">
                             <div class="mybutton viewwork d-flex align-items-center justify-content-center">
                                 <p class="main-title box d-block my-auto"><span class="fat viewbutton">View My Work</span></p>
                             </div>
@@ -384,6 +384,7 @@
                         </div>
                     </span>
                 </div>
+                <div class="slide_number">1/4</div>
                 
                     <style>
                         img{
@@ -454,6 +455,12 @@
                     </style>
                     <!-- Slide 1 -->
                     <div class="slide" id="bg-1">
+
+                        <div class="options">
+                            <h3 class="options_text">github</h3>
+                            <h3 class="options_text">site</h3>
+                            <h3 class="options_text">info</h3>
+                        </div>
                         <!-- <h1 class="title-left">WHATSMYCHORD</h1>
                         <p class="desc-left">A guitar chord detection website where you input the notes of a unknown chord onto a fretboard and the algorithm produces its name and different ways to play it up and down the fretboard</p>
                          -->
@@ -861,6 +868,8 @@
 
                         $(".recentproj").addClass("whatsmy-title");
                         $(".recentproj").removeClass("whatsmy-smaller");
+
+                        $(".slide_number").text("1/4");
                         
                     }
                     else if (destination==1){
@@ -869,18 +878,26 @@
                         $(".recentproj").text("The Philosophy Cove");
                         $(".recentproj").addClass("whatsmy-smaller");
 
+                        $(".slide_number").text("2/4");
+
                         
                     }
                     else if (destination==2){
                         // $(".back3").css({'background-color':'#ceb895'});
                         console.log("overwriting");
                         $(".recentproj").text("The Warsha Shop");
+                        $(".recentproj").addClass("whatsmy-smaller");
+
+                        $(".slide_number").text("3/4");
                         
                     }
                     else{
                         // $(".back3").css({'background-color':'#95ce9e'});
                         
                         $(".recentproj").text("Netflix Browser");
+                        $(".recentproj").addClass("whatsmy-smaller");
+
+                        $(".slide_number").text("4/4");
                         
                     }
                 }

@@ -507,7 +507,7 @@ body{
 
   #bg-2 {
 
-    background-image: url("thephilosophycove.jpg");
+    background-image: url("philosophycove-new.jpg");
     
     height: 100%;
   
@@ -531,7 +531,7 @@ body{
   }
   #bg-4 {
 
-    background-image: url("netflixbrowser.jpg");
+    background-image: url("netflixbrowser-new.jpg");
     height: 100%;
   
     /* Center and scale the image nicely */
@@ -593,9 +593,39 @@ body{
     font-size: 18px !important;
     transform: translateX(-29px) translateY(3px) !important;
   }
-  .slide{
+  /* .slide{
       background-size:cover;
-  }
+  } */
+  .slide_number{
+    positioN: absolute;
+
+    z-index: 4000;
+
+
+    /* left: 16px;
+    bottom: 5px; */
+
+    bottom: 10px;
+    right: 16px;
+
+
+    color: white;
+    font-size: 30px;
+    
+    }
+    .options{
+        position: absolute;
+        bottom: 41px;
+        /* color: #f9f1e9; */
+        left: 49px;
+        opacity: 0.8;
+    }
+    .options_text{
+        font-size: 2em !important;
+    }
+  
+
+ 
 
 /* ------------------------loader------------------------- */
 .loader-wrapper{
@@ -671,6 +701,11 @@ body{
 /* ------------------------loader (END) ------------------------- */
 
 
+@media (max-device-width:768px){
+    .fp-controlArrow{
+        display:none;
+    }
+}
 
 /*  Width < 420px */
 @media (max-width:420px){
@@ -928,7 +963,16 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
       } */
+      .slide_number{
+    
+    
+        right: unset;
+        left: 16px ;
+        bottom: 5px ;
 
+        font-size: 40px;
+        
+        }
     #fp-nav{
         display:block;
     }
