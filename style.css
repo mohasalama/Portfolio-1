@@ -515,6 +515,9 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /* for mobile */
+    background-position: right -767px bottom 0px;
   }
 
   #bg-3 {
@@ -528,6 +531,9 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /* for mobile */
+    background-position: right -422px bottom 0px;
   }
   #bg-4 {
 
@@ -538,6 +544,9 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /* for mobile */
+    background-position: right -937px bottom 0px;
   }
 
   /* new */
@@ -613,13 +622,28 @@ body{
     font-size: 30px;
     
     }
-    .options{
+    .options, .options2, .options3, .options4{
         position: absolute;
-        bottom: 41px;
-        /* color: #f9f1e9; */
-        left: 49px;
+    
         opacity: 0.8;
+
+        bottom: 29px;
+        /* color: #f9f1e9; */
+        left: 32px;
     }
+    .options2{
+        left:calc(100vw + 32px) !important;
+        opacity: 1 !important;
+    }
+    .options3{
+        left:calc(200vw + 32px) !important;
+        opacity: 1 !important;
+    }
+    .options4{
+        left:calc(300vw + 32px) !important;
+        opacity: 1 !important;
+    }
+
     .options_text{
         font-size: 2em !important;
     }
@@ -818,6 +842,26 @@ body{
     #bg-4{
         background-position:right -718px bottom 0px;
     } */
+
+    .options, .options2, .options3, .options4{
+        position: absolute;
+        bottom: 41px;
+        /* color: #f9f1e9; */
+        left: 49px;
+        opacity: 0.8;
+    }
+    .options2{
+        left:calc(100vw + 49px) !important;
+        opacity:1 !important;
+    }
+    .options3{
+        left:calc(200vw + 49px) !important;
+        opacity:1 !important;
+    }
+    .options3{
+        left:calc(300vw + 49px) !important;
+        opacity:1 !important;
+    }
 }
 /* BIGGER THAN (>) 374 px */
 @media (min-width:374px){
@@ -963,6 +1007,10 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
       } */
+
+      #bg-2{
+          background-position:center;
+      }
       .slide_number{
     
     
