@@ -491,30 +491,80 @@ body{
     top:0;
 
 }
+
+/* old */
 #bg-1 {
-    /* The image used */
+
+    background-image: url("whatsmychord.jpg");
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #bg-2 {
+
+    background-image: url("thephilosophycove.jpg");
+    
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #bg-3 {
+
+    
+    background-image: url("warshashop.jpg");
+
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #bg-4 {
+
+    background-image: url("netflixbrowser.jpg");
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* new */
+/* #bg-1 {
+
     background-image: url("whatsmychord.jpg");
 
 
   }
 
   #bg-2 {
-    /* The image used */
+   
     background-image: url("thephilosophycove.jpg");
 
   }
 
   #bg-3 {
-    /* The image used */
+  
     background-image: url("warshashop.jpg");
 
 
   }
   #bg-4 {
-    /* The image used */
+ 
     background-image: url("netflixbrowser.jpg");
 
-  }
+  } */
 
 
   .title-left{
@@ -688,7 +738,8 @@ body{
 
 /* BIGGER THAN (>) 321 px */
 @media (min-width:320px)  {
-    #bg-1{
+
+    /* #bg-1{
         background-position: right -374px bottom 0px;
     }
     #bg-2{
@@ -700,7 +751,7 @@ body{
 
     #bg-4{
         background-position:right -662px bottom 0px;
-    }
+    } */
     .aboutme_desc{
         padding-top:70px !important;
     }
@@ -719,7 +770,7 @@ body{
 }
 
 @media (min-width:360px){
-    #bg-1{
+    /* #bg-1{
         background-position: right -374px bottom 0px;
     }
     #bg-2{
@@ -731,7 +782,7 @@ body{
 
     #bg-4{
         background-position:right -718px bottom 0px;
-    }
+    } */
 }
 /* BIGGER THAN (>) 374 px */
 @media (min-width:374px){
@@ -842,12 +893,11 @@ body{
     /* .fp-viewing-section2{
         cursor:default !important;
     } */
-
-    #bg-1 {
-        /* Full height */
+    
+    /* #bg-1 {
+       
         height: 100%;
-      
-        /* Center and scale the image nicely */
+
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -856,7 +906,6 @@ body{
       #bg-2 {
         height: 100%;
       
-        /* Center and scale the image nicely */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -866,7 +915,7 @@ body{
 
         height: 100%;
       
-        /* Center and scale the image nicely */
+    
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -874,11 +923,11 @@ body{
       #bg-4 {
         height: 100%;
       
-        /* Center and scale the image nicely */
+    
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-      }
+      } */
 
     #fp-nav{
         display:block;
