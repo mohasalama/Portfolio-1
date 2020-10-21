@@ -456,10 +456,20 @@
                     <!-- Slide 1 -->
                     <div class="slide" id="bg-1">
 
-                        <div class="options">
-                            <h3 class="options_text">github</h3>
-                            <h3 class="options_text">site</h3>
-                            <h3 class="options_text">info</h3>
+                        <div class="options1">
+                            <a href="https://github.com/Mohacool/WhatsMyChord">
+                                <h3 class="options_text">github</h3>
+                            </a>
+                            
+                            <a href="https://www.whatsmychord.com">
+                                <h3 class="options_text">site</h3>
+                            </a>
+
+                            <h3 class="options_text info1">info</h3>
+                        </div>
+
+                        <div class="onion1">
+                            <p class="info1_desc">A guitar chord detection website where you input the notes of a unknown chord onto a fretboard and the algorithm produces its name and different ways to play it up and down the fretboard</p>
                         </div>
                         <!-- <h1 class="title-left">WHATSMYCHORD</h1>
                         <p class="desc-left">A guitar chord detection website where you input the notes of a unknown chord onto a fretboard and the algorithm produces its name and different ways to play it up and down the fretboard</p>
@@ -469,27 +479,45 @@
                     <div class="slide" id="bg-2">
                         
                         <div class="options2">
-                            <h3 class="options_text">github</h3>
-                            <h3 class="options_text">site</h3>
-                            <h3 class="options_text">info</h3>
+                            <a href="https://github.com/Mohacool/ThePhilosophyCove">
+                                <h3 class="options_text">github</h3>
+                            </a>
+                            
+                            <a href="https://thephilosophycove.com">
+                                <h3 class="options_text">site</h3>
+                            </a>
+
+                            <h3 class="options_text info2">info</h3>
                         </div>
                     
                     </div>
 
                     <div class="slide" id="bg-3">
                         <div class="options3">
-                            <h3 class="options_text">github</h3>
-                            <h3 class="options_text">site</h3>
-                            <h3 class="options_text">info</h3>
+                            <a href="https://github.com/Mohacool/warsha-shop">
+                                <h3 class="options_text">github</h3>
+                            </a>
+                            
+                            <a href="http://thewarshashop.com">
+                                <h3 class="options_text">site</h3>
+                            </a>
+
+                            <h3 class="options_text info3">info</h3>
                         </div>
              
                     </div>
 
                     <div class="slide" id="bg-4">
-                        <div class="options">
-                            <h3 class="options_text">github</h3>
-                            <h3 class="options_text">site</h3>
-                            <h3 class="options_text">info</h3>
+                        <div class="options4">
+                            <a href="https://github.com/Mohacool/NetflixBrowserReact">
+                                <h3 class="options_text">github</h3>
+                            </a>
+                            
+                            <a href="https://netflix-clone-60d6f.web.app/">
+                                <h3 class="options_text">site</h3>
+                            </a>
+
+                            <h3 class="options_text info4">info</h3>
                         </div>
              
                     </div>
@@ -701,8 +729,29 @@
 
         $(document).ready(function() {
 
-          
+            
+            $(".info1_desc").css({'left':$('.options1').css("left")});
+            
+            
+            $(".info1").on('click',function(e){
 
+                $(".onion1").css({'display':'block'});
+                console.log("info clicked");
+                $(".onion1").animate({'opacity':'1'},0.5);
+
+                $(".info1").css({'opacity':'0.5'});
+                $(".recentproj").css({'color':'black'});
+
+                $(".onion1").on('click',function(e){
+                    // $(".onion1").css({'display':'none'});
+                    console.log("somewhere else clicked");
+                    $(".onion1").animate({'opacity':'0'},1.5);
+                    $(".info1").css({'opacity':'1'});
+                    $(".onion1").css({'display':'none'});
+                    $(".recentproj").css({'color':'#f9f1e9'});
+                })
+
+            })
             $('.me').on('click',function(e){
                 alert('Hey there cutie :) Your screen dimensions are: '+screen.width+'x'+screen.height);
                 alert('Your window dimensions are: '+window.innerWidth+'x'+window.innerHeight);
