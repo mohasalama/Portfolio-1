@@ -522,8 +522,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* for mobile */
-    background-position: right -767px bottom 0px;
+    
   }
 
   #bg-3 {
@@ -538,8 +537,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* for mobile */
-    background-position: right -422px bottom 0px;
+    
   }
   #bg-4 {
 
@@ -551,8 +549,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* for mobile */
-    background-position: right -937px bottom 0px;
+   
   }
 
   /* new */
@@ -655,7 +652,7 @@ body{
         transition: all 0.5s ease-in-out;
     }
   
-    .onion1{
+    .onion1, .onion2, .onion3, .onion4{
         display:none;
         width: 100%;
         height: 100%;
@@ -663,7 +660,7 @@ body{
         transition: all 1s ease-in-out;
         opacity:0;
     }
-    .info1_desc{
+    .info1_desc, .info2_desc, .info3_desc, .info4_desc{
         position: absolute;
         width: 75vw;
         font-family: 'Raleway-SemiBold';
@@ -753,7 +750,7 @@ body{
     }
 }
 
-/*  Width < 420px */
+/*  Width < 420px  IPHONE X*/
 @media (max-width:420px){
     @media (min-height:800px){
         .men{
@@ -799,7 +796,17 @@ body{
     }
     /*  Height > 750px */
     @media (min-height:750px){
-        
+        #bg-1{
+            background-position: right -590px bottom 0px !important;
+        }
+        #bg-2{
+            /* for mobile */
+            background-position: right -889px bottom 0px !important;        }
+        #bg-3{
+            background-position: right -567px bottom 0px !important;        }
+        #bg-4{
+            background-position: right -1176px bottom 0px !important;        
+        }
         .grid{
             padding-top:50px;
         }
@@ -819,6 +826,17 @@ body{
 
 /* BIGGER THAN (>) 321 px */
 @media (min-width:320px)  {
+
+    #bg-2{
+        /* for mobile */
+        background-position: right -651px bottom 0px;
+    }
+    #bg-3{
+        background-position: right -372px bottom 0px;
+    }
+    #bg-4{
+        background-position: right -802px bottom 0px;
+    }
 
     /* #bg-1{
         background-position: right -374px bottom 0px;
@@ -888,7 +906,18 @@ body{
 /* BIGGER THAN (>) 374 px */
 @media (min-width:374px){
 
+    #bg-2{
+        /* for mobile */
+        background-position: right -767px bottom 0px;
+    }
 
+    #bg-3{
+        /* for mobile */
+        background-position: right -434px bottom 0px;    }
+    #bg-4{
+         /* for mobile */
+        background-position: right -937px bottom 0px;
+    }
     .fronticons{
         width:40px !important;
     }
@@ -938,6 +967,16 @@ body{
 
 /* BIGGER THAN (>) 413 px */
 @media (min-width:413px){
+    #bg-1{
+        background-position: right -471px bottom 0px;
+    }
+    #bg-2{
+        /* for mobile */
+        background-position: right -471px bottom 0px;    }
+    #bg-3{
+        background-position: right -452px bottom 0px;    }
+    #bg-4{
+        background-position: right -1011px bottom 0px;    }
     .fronticons{
         width:40px !important;
     }

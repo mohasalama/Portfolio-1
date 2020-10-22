@@ -480,14 +480,18 @@
                         
                         <div class="options2">
                             <a href="https://github.com/Mohacool/ThePhilosophyCove">
-                                <h3 class="options_text">github</h3>
+                                <h3 class="options_text" style="color:#f9f1e9">github</h3>
                             </a>
                             
                             <a href="https://thephilosophycove.com">
-                                <h3 class="options_text">site</h3>
+                                <h3 class="options_text" style="color:#f9f1e9">site</h3>
                             </a>
 
-                            <h3 class="options_text info2">info</h3>
+                            <h3 class="options_text info2" style="color:#f9f1e9">info</h3>
+                        </div>
+
+                        <div class="onion2">
+                            <p class="info2_desc">A guitar chord detection website where you input the notes of a unknown chord onto a fretboard and the algorithm produces its name and different ways to play it up and down the fretboard</p>
                         </div>
                     
                     </div>
@@ -504,20 +508,28 @@
 
                             <h3 class="options_text info3">info</h3>
                         </div>
+
+                        <div class="onion3">
+                            <p class="info3_desc">A guitar chord detection website where you input the notes of a unknown chord onto a fretboard and the algorithm produces its name and different ways to play it up and down the fretboard</p>
+                        </div>
              
                     </div>
 
                     <div class="slide" id="bg-4">
                         <div class="options4">
                             <a href="https://github.com/Mohacool/NetflixBrowserReact">
-                                <h3 class="options_text">github</h3>
+                                <h3 class="options_text" style="color:#f9f1e9">github</h3>
                             </a>
                             
                             <a href="https://netflix-clone-60d6f.web.app/">
-                                <h3 class="options_text">site</h3>
+                                <h3 class="options_text" style="color:#f9f1e9">site</h3>
                             </a>
 
-                            <h3 class="options_text info4">info</h3>
+                            <h3 class="options_text info4" style="color:#f9f1e9">info</h3>
+                        </div>
+
+                        <div class="onion4">
+                            <p class="info4_desc">A guitar chord detection website where you input the notes of a unknown chord onto a fretboard and the algorithm produces its name and different ways to play it up and down the fretboard</p>
                         </div>
              
                     </div>
@@ -729,29 +741,40 @@
 
         $(document).ready(function() {
 
+            var preventAnimation = false;
+
+            function onClickers(slidenum,close=false){
+                    var desc = $(".info"+slidenum+"_desc");
+                    var options = $(".options"+slidenum);
+                    var info = $(".info"+slidenum);
+                    var onion =$(".onion"+slidenum);
+                    desc.css({'left':options.css("left")});
+                    info.on('click',function(e){
+
+                        onion.css({'display':'block'});
+                        onion.animate({'opacity':'1'},0.5);
+                        info.css({'opacity':'0.5'});
+                        $(".recentproj").css({'color':'black'});
+
+                        onion.on('click',function(e){
+                            onion.animate({'opacity':'0'},1.5);
+                            info.css({'opacity':'1'});
+                            onion.css({'display':'none'});
+                            $(".recentproj").css({'color':'#f9f1e9'});
+                        })
+
+                    })
+                    if (close==true){
+                        info.css({'opacity':'1'});
+                        onion.css({'display':'none'});
+                    }
+            }
+            onClickers(1);
+            onClickers(2);
+            onClickers(3);
+            onClickers(4);
             
-            $(".info1_desc").css({'left':$('.options1').css("left")});
             
-            
-            $(".info1").on('click',function(e){
-
-                $(".onion1").css({'display':'block'});
-                console.log("info clicked");
-                $(".onion1").animate({'opacity':'1'},0.5);
-
-                $(".info1").css({'opacity':'0.5'});
-                $(".recentproj").css({'color':'black'});
-
-                $(".onion1").on('click',function(e){
-                    // $(".onion1").css({'display':'none'});
-                    console.log("somewhere else clicked");
-                    $(".onion1").animate({'opacity':'0'},1.5);
-                    $(".info1").css({'opacity':'1'});
-                    $(".onion1").css({'display':'none'});
-                    $(".recentproj").css({'color':'#f9f1e9'});
-                })
-
-            })
             $('.me').on('click',function(e){
                 alert('Hey there cutie :) Your screen dimensions are: '+screen.width+'x'+screen.height);
                 alert('Your window dimensions are: '+window.innerWidth+'x'+window.innerHeight);
@@ -775,6 +798,57 @@
                         
                 navigation:true,
                 navigationTooltips:['hello','jello','welcome','delcome'],
+
+                afterSlideLoad: function(section, origin, destination, direction){
+                    console.log(destination);
+                    var screen_width = window.innerWidth;
+                    if (screen_width<1024){
+                        var mobile=true;
+                    }
+                    console.log("=====slide has been open"+destination);
+                    console.log(section,origin,destination);
+
+                    console.log("leaving "+section);
+                    
+                    if (destination==0){
+                        
+                        $(".recentproj").text("Whats My Chord");
+
+                        $(".recentproj").addClass("whatsmy-title");
+                        $(".recentproj").removeClass("whatsmy-smaller");
+
+                        $(".slide_number").text("1/4");
+                        
+                    }
+                    else if (destination==1){
+                        // $(".back3").css({'background-color':'#95ce9e'});
+                        
+                        $(".recentproj").text("The Philosophy Cove");
+                        $(".recentproj").addClass("whatsmy-smaller");
+
+                        $(".slide_number").text("2/4");
+
+                        
+                    }
+                    else if (destination==2){
+                        // $(".back3").css({'background-color':'#ceb895'});
+                        console.log("overwriting");
+                        $(".recentproj").text("The Warsha Shop");
+                        $(".recentproj").addClass("whatsmy-smaller");
+
+                        $(".slide_number").text("3/4");
+                        
+                    }
+                    else{
+                        // $(".back3").css({'background-color':'#95ce9e'});
+                        
+                        $(".recentproj").text("Netflix Browser");
+                        $(".recentproj").addClass("whatsmy-smaller");
+
+                        $(".slide_number").text("4/4");
+                        
+                    }
+                },
                 
                 afterLoad: function(anchorLink, index) {
                     // Objects 
@@ -829,6 +903,8 @@
                         baby_rocket.css({'top':'-100px'});
                     }
                     if (slideNumber==4){
+
+                        console.log('!========!'+$('.fp-section.active').find('.fp-slide.active')[0].id);
                         const baby_rocket3 = $('.holder.rocket3');
                         const t4 = new TimelineMax();
                         const t6 = new TimelineMax();
@@ -845,19 +921,21 @@
                         .to(navRight,0.5,{'right':'20px'});
 
                         // Projects switch 
-
+                        
                         var top = $(".whatsmy-title").css("top");
                         var font_size = $(".whatsmy-title").css("font-size")
 
+                        console.log($('.fp-section.active').find('.fp-slide.active')[0].id)
                         if ($('.fp-section.active').find('.fp-slide.active')[0].id=="bg-1"){
                             
-
-                            t6.to(projects,0.5,{'opacity':'0'},1.5)
-                            .call(function() {
-                                projects.addClass("whatsmy-title");
-                                projects.text("Whats My Chord");
-                            })
-                            .to(projects,0.5,{'opacity':'1'});
+                            console.log("making it here");
+                            // t6.to(projects,0.5,{'opacity':'0'},1.5)
+                            // .call(function() {
+                            //     projects.addClass("whatsmy-title");
+                            //     projects.text("Whats My Chord");
+                            // })
+                            // .to(projects,0.5,{'opacity':'1'});
+                           
 
 
                         }
@@ -913,56 +991,12 @@
                     
                 },
                 onSlideLeave: function(section, origin, destination, direction){
-                    // console.log(section,origin,destination,direction);
-                },
-                afterSlideLoad: function(section, origin, destination, direction){
-                    console.log(destination);
-                    var screen_width = window.innerWidth;
-                    if (screen_width<1024){
-                        var mobile=true;
-                    }
-                    console.log("slide has been open");
-                    console.log(section,origin,destination);
-                    
-                    if (destination==0){
-                        
-                        $(".recentproj").text("Whats My Chord");
+                    console.log("i can intercept");
 
-                        $(".recentproj").addClass("whatsmy-title");
-                        $(".recentproj").removeClass("whatsmy-smaller");
-
-                        $(".slide_number").text("1/4");
-                        
-                    }
-                    else if (destination==1){
-                        // $(".back3").css({'background-color':'#95ce9e'});
-                        
-                        $(".recentproj").text("The Philosophy Cove");
-                        $(".recentproj").addClass("whatsmy-smaller");
-
-                        $(".slide_number").text("2/4");
-
-                        
-                    }
-                    else if (destination==2){
-                        // $(".back3").css({'background-color':'#ceb895'});
-                        console.log("overwriting");
-                        $(".recentproj").text("The Warsha Shop");
-                        $(".recentproj").addClass("whatsmy-smaller");
-
-                        $(".slide_number").text("3/4");
-                        
-                    }
-                    else{
-                        // $(".back3").css({'background-color':'#95ce9e'});
-                        
-                        $(".recentproj").text("Netflix Browser");
-                        $(".recentproj").addClass("whatsmy-smaller");
-
-                        $(".slide_number").text("4/4");
-                        
-                    }
+                    // Close the info background for the page you're about to leave if slide away
+                    onClickers(destination+1,true);
                 }
+                
                 // onLeave: function(origin, destination, direction){
                 //     if (origin==3){
                 //         var slide3_loaded = true;
@@ -977,6 +1011,7 @@
                     
                 
             });
+            
             
             $('.rocket.normal-rocket.rocket1').on('click',function(e){
                 
