@@ -32,6 +32,7 @@ body{
     height: 100%;
     position: absolute;
     background-color: #f9f1e9;
+    background-color: #d6e6f3;
     opacity:1;
     z-index:-1;
 }
@@ -52,17 +53,21 @@ body{
     background-color: #95ce9e;
     opacity:1;
     z-index:-1;
+
+    
+    background-image: url("contact.jpg");
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
-.getintouch{
-    font-family: 'Raleway-SemiBold';
-    font-size:60px !important;
-}
-.touch{
-    position:absolute;
-    top:41%;
-}
+
+
 .contain{
     object-fit:contain;
 }
@@ -488,9 +493,11 @@ body{
 } */
 
 .subtouch{
-    position:absolute;
-    top:50%;
-    font-size:17px !important;
+    /* position:absolute;
+    top:50%; */
+    font-size: 14.5px !important;
+    white-space: nowrap;
+    transform: translateY(-5px);
 }
 .whatsmy{
     width:100%;
@@ -667,6 +674,37 @@ body{
         top:30%;
         font-size: 18px;
     }
+    .fp-tooltip.right{
+        opacity:0.35;
+    }
+
+    .getintouch{
+        font-family: 'Raleway-SemiBold';
+        font-size:50px !important;
+    }
+    .touch{
+        /* position:absolute;
+        top:41%; */
+    }
+    .touchlinks{
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+
+    .links {
+        font-size: 14px !important;
+        color: #2b2b2b;
+        margin: 0 auto;
+        font-family: 'Raleway';
+        line-height: 17px;
+    }
+    .links:hover{
+        color:#f9f1e9;
+    }
+    .contact_holder{
+        position:absolute;
+        top:41%;
+    }
 
  
 
@@ -749,6 +787,8 @@ body{
         display:none;
     }
 }
+
+
 
 /*  Width < 420px  IPHONE X*/
 @media (max-width:420px){
@@ -883,6 +923,24 @@ body{
         background-position:right -718px bottom 0px;
     } */
 
+    .getintouch{
+        font-family: 'Raleway-SemiBold';
+        font-size: 56px !important;
+    }
+    .subtouch{
+        font-size: 16px !important;
+    }
+
+    .links {
+        font-size: 17px !important;
+     
+    }
+   
+    .contact_holder{
+        position:absolute;
+        top:41%;
+    }
+
     .options1, .options2, .options3, .options4{
         position: absolute;
         bottom: 41px;
@@ -967,6 +1025,20 @@ body{
 
 /* BIGGER THAN (>) 413 px */
 @media (min-width:413px){
+
+    .getintouch{
+        font-family: 'Raleway-SemiBold';
+        font-size: 65px !important;
+    }
+    .subtouch {
+        font-size: 18px !important;
+        padding-left: 10px !important;
+    }
+
+    .links {
+        font-size: 20px !important;
+        line-height: 23px;
+    }
     #bg-1{
         background-position: right -471px bottom 0px;
     }
@@ -1025,7 +1097,12 @@ body{
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
     
 }
-@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:641px)  { 
+    #bg-4 {
+        background-position: right -640px bottom 0px !important;
+    }
+
+}
 
 
 /* Normal desktop   > 768px */
@@ -1068,6 +1145,32 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
       } */
+
+    
+    .getintouch {
+        font-size: 101px !important;
+    }
+    .subtouch {
+        font-size: 22px !important;
+        padding-left: 15px !important;
+    }
+    .links {
+        font-size: 25px !important;
+        line-height: 30px;
+        padding-left: 20px;
+    }
+    #bg-1{
+        background-position: right -222px bottom 0px !important;
+    }
+    #bg-2{
+        background-position: right -577px bottom 0px !important;
+    }
+    #bg-3{
+        background-position: right -34px bottom 0px !important;
+    }
+    #bg-4{
+        background-position: right -543px bottom 0px !important;
+    }
       .whatsmy-smaller {
         font-size: 28px !important;
         top: 10px !important;
@@ -1080,15 +1183,6 @@ body{
             left: -55px;
         }
 
-        #bg-1{
-            background-position: right -434px bottom 0px !important;
-        }
-        #bg-2{
-            background-position: right -1047px bottom 0px !important;
-        }
-        #bg-3{
-            background-position: right -109px bottom 0px;
-        }
 
       #bg-2{
           background-position:center;
@@ -1197,7 +1291,18 @@ body{
 }
 
 @media (min-width: 1024px) {
-
+    #bg-1{
+        background-position: center !important;
+    }
+    #bg-2{
+        background-position: center !important;
+    }
+    #bg-3{
+        background-position: center !important;
+    }
+    #bg-4{
+        background-position: center !important;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -1445,7 +1550,139 @@ body{
     }
 } */
 
+/* Computer Screens > 1025 */
+@media only screen and (min-device-width: 1025px) {
+    #bg-1{
+        background-position: center !important;
+    }
+    #bg-2{
+        background-position: center !important;
+    }
+    #bg-3{
+        background-position: center !important;
+    }
+    #bg-4{
+        background-position: center !important;
+    }
+}
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
+    
+    #bg-1{
+        background-position: right -434px bottom 0px !important;
+    }
+    #bg-2{
+        background-position: right -1047px bottom 0px !important;
+    }
+    #bg-3{
+        background-position: right -109px bottom 0px;
+    }
+    #bg-4{
+        background-position: right -1100px bottom 0px !important;
+    }
+
+    .info1_desc, .info2_desc, .info3_desc, .info4_desc{
+        font-size: 27px !important;
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+    #bg-1{
+        background-position: right -434px bottom 0px !important;
+    }
+    #bg-2{
+        background-position: right -450px bottom 0px !important;
+    }
+    #bg-3{
+        background-position: right -109px bottom 0px;
+    }
+    #bg-4{
+        background-position: right -500px bottom 0px !important;
+    }
+    .info1_desc, .info2_desc, .info3_desc, .info4_desc{
+        font-size: 27px !important;
+    }
+
+}
+/* ipad pro landscape */
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
+    
+    #bg-1{
+        background-position: right -300px bottom 0px !important;
+    }
+    #bg-2{
+        background-position: right -700px bottom 0px !important;
+    }
+    #bg-3{
+        background-position: right -100px bottom 0px !important;
+        }
+    #bg-4{
+        background-position: right -650px bottom 0px !important
+    }
+    .options_text {
+        font-size: 3em !important;
+    }
+    .info1_desc, .info2_desc, .info3_desc, .info4_desc{
+        font-size: 35px !important;
+    }
+    .whatsmy-title {
+        
+        left: -130px !important;
+    }
+    .whatsmy-smaller {
+      
+        left: -190px !important;
+    }
+}
+
+/* ipad pro Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+    .options_text {
+        font-size: 3em !important;
+    }
+    .info1_desc, .info2_desc, .info3_desc, .info4_desc{
+        font-size: 35px !important;
+    }
+    
+    .demo .main-title .intro{
+        font-size: 1.9em !important;
+    }
+    .sub-title {
+        /* border: 1px solid green; */
+      
+        font-size: 1.4em !important;
+      
+    }
+    .main-text {
+        top: 500px !important;
+    }
+    .about {
+        padding-left: 20% !important;
+        padding-right: 10% !important;
+        font-size: 40px !important;
+        padding-top: 100px !important;
+    }
+    .allprograms {
+        padding-left: 19% !important;
+        column-count: 1 !important;
+        font-size: 30px !important;
+    }
+    .hello {
+        font-size: 8em !important;
+    }
+    #bg-1{
+        background-position: right -600px bottom 0px !important;
+    }
+    #bg-3{
+        background-position: right -500px bottom 0px !important;
+    }
+    #bg-4 {
+        background-position: right -1550px bottom 0px !important;
+    }
+}
 
 
 

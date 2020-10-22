@@ -129,21 +129,25 @@
                     <!-- <span class="dot"></span> -->
                     
                     <img class="me" src="me.png" alt="">
-                    <div class="row icons">
-                        <div class="col"> hello</div>
-                    </div>
+                   
 
                     <div class="row mt-2 icons w-100" >
                         <div class="row mx-auto">
-                            <div class="button mr-3 trio  other d-flex align-items-center justify-content-center">
-                                <img class="fronticons" src="github-icon-1.svg" alt="">
-                            </div>
-                            <div class="button mr-3 trio other d-flex align-items-center justify-content-center">
-                                <img class="fronticons" src="linkedin.svg" alt="">
-                            </div>
-                            <div class="button  trio  other d-flex align-items-center justify-content-center">
-                                <img class="fronticons" src="mail.svg" alt="" style="transform:translateY(3px)">
-                            </div>
+                            <a href="https://github.com/Mohacool/">
+                                <div class="button mr-3 trio  other d-flex align-items-center justify-content-center">
+                                    <img class="fronticons" src="github-icon-1.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mohamedhsalama/">
+                                <div class="button mr-3 trio other d-flex align-items-center justify-content-center">
+                                    <img class="fronticons" src="linkedin.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="#section5">
+                                <div class="button  trio  other d-flex align-items-center justify-content-center">
+                                    <img class="fronticons" src="mail.svg" alt="" style="transform:translateY(3px)">
+                                </div>
+                            </a>
                         </div>
                         
                             
@@ -587,14 +591,26 @@
         <div class="section" data-anchor="section5">
             <div id="large-header" class="large-header-flipped" style="min-height: -webkit-fill-available;height:100%">
                 <div class="back4"></div>
-                <div class="touch throw">
-                    <h1 class="pl-2 getintouch" >Get in touch</h1>
+
+                <div class="contact_holder">
+                    <div class="touch pl-3 throw">
+                        <h1 class="getintouch" >Get in touch</h1>
+                        <h3 class="pl-1 subtouch">Have a question or want to work together?</h3>
+                    </div>
+                    <div class="touchlinks" style="border:1px solid transparent">
+                        <a href="mailto:moha.salama@mail.utoronto.ca">
+                            <h5 class="links mx-auto">email: moha.salama@mail.utoronto.ca</h5>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohamedhsalama/">
+                            <h5 class="links mx-auto">linkedin: Mohamed Salama</h5>
+                        </a>
+                        <a href="https://github.com/Mohacool">
+                            <h5 class="links mx-auto">github: github.com/Mohacool</h5>
+                        </a>
+                        
+                    </div>
                 </div>
-                <div class="touchlinks">
-                    <!-- <h3>Email -  moha.salama@mail.utoronto.ca</h3>
-                    <h3>LinkedIn - linkedin.com/mohamedhsalama</h3> -->
-                    <h3 class="pl-3 pt-2 subtouch">Have a question or want to work together?</h3>
-                </div>
+            
                 
             </div>
         </div>
@@ -798,7 +814,7 @@
             $('#fullpage').fullpage({
                         
                 navigation:true,
-                navigationTooltips:['hello','jello','welcome','delcome'],
+                navigationTooltips:['WELCOME','ABOUT ME','SKILLS','PROJECTS','CONTACT'],
 
                 afterSlideLoad: function(section, origin, destination, direction){
                     console.log(destination);
@@ -860,6 +876,9 @@
                     const baby_rocket = $('.holder.rocket2');
                     // SlideNumber
                     var slideNumber = $('.fp-section.active').index() + 1;
+
+                    $(".fp-tooltip.right").css({'opacity':'0.35'});
+                    $("#fp-nav > ul > li:nth-child("+slideNumber+") > div").css({'opacity':'1'});
                     if (slideNumber==1){
                         $("#fp-nav ul li a span, .fp-slidesNav ul li a span").css({"background-color": "rgba(219, 210, 210, 0.4)"});
                     }
