@@ -674,6 +674,42 @@ body{
         top:30%;
         font-size: 18px;
     }
+    .desktop_info1_desc, .desktop_info2_desc, .desktop_info3_desc, .desktop_info4_desc{
+       
+        width: 75vw;
+        font-family: 'Raleway-SemiBold';
+        width:300px;
+       
+        font-size: 18px;
+    }
+    .desktop_options_text{
+        font-size: 2em !important;
+        transition: all 0.5s ease-in-out;
+        color:#f9f1e9;
+    }
+    .desktop_holder1{
+        position: absolute;
+        left: 40px;
+        top: 40%;
+    }
+
+    .desktop_holder2{
+        position: absolute;
+        right: calc(200vw + 40px);
+        top: 40%;
+    }
+    .desktop_holder3{
+        position: absolute;
+        left: calc(200vw + 40px);
+        top: 40%;
+    }
+    .desktop_holder4{
+        position: absolute;
+        right: 40px;
+        top: 40%;
+    }
+ 
+
     .fp-tooltip.right{
         opacity:0.35;
     }
@@ -1303,6 +1339,13 @@ body{
     #bg-4{
         background-position: center !important;
     }
+    
+}
+
+@media (min-width:1025px){
+    .options1,.options2,.options3,.options4{
+        display:none;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -1310,9 +1353,48 @@ body{
 }
 
 @media (min-width: 1366px) {
+
+    .desktop_info1_desc, .desktop_info2_desc, .desktop_info3_desc, .desktop_info4_desc{
+       
+        width: 75vw;
+        font-family: 'Raleway-SemiBold';
+        width:300px;
+       
+        font-size: 19px;
+    }
+    .desktop_options_text{
+        font-size: 2em !important;
+        transition: all 0.5s ease-in-out;
+        color:#f9f1e9;
+    }
+    .desktop_holder1 {
+        position: absolute;
+        left: 110px;
+        top: 35%;
+    }
+
+    .desktop_holder2{
+        position: absolute;
+        right: calc(200vw + 110px);
+        top: 35%;
+    }
+    .desktop_holder3{
+        position: absolute;
+        left: calc(200vw + 110px);
+        top: 35%;
+    }
+    .desktop_holder4{
+        position: absolute;
+        right: 110px;
+        top: 35%;
+    }
     .hello{
         font-size:6em !important;
         padding-left:6px;
+    }
+    .contact_holder {
+    
+        padding-left: 20px;
     }
     
     
@@ -1376,12 +1458,33 @@ body{
     .aboutme_desc {
         padding-top: 90px !important;
     }
+
+    .whatsmy-title {
+        left: -130px !important;
+    }
+    .whatsmy-smaller {
+        left: -210px !important;
+        top: 5px !important;
+    }
     
 }
 
 
 /* WIDTH BIGGER THAN > 1440PX */
 @media (min-width: 1440px) {
+
+    .getintouch {
+        font-size: 113px !important;
+    }
+    .subtouch {
+        font-size: 27px !important;
+        padding-left: 21px !important;
+    }
+    .links {
+        font-size: 29px !important;
+        line-height: 35px;
+        padding-left: 31px;
+    }
     .main-text{
         top:400px;
     }
@@ -1467,6 +1570,48 @@ body{
 }
 
 @media (min-width: 1920px) {
+    .desktop_info1_desc, .desktop_info2_desc, .desktop_info3_desc, .desktop_info4_desc {
+        width: 75vw;
+        font-family: 'Raleway-SemiBold';
+        width: 500px;
+        font-size: 30px;
+    }
+    .desktop_options_text {
+        font-size: 3.2em !important;
+      
+    }
+    .desktop_holder1 {
+       
+        left: 150px;
+     
+    }
+
+    .desktop_holder2{
+        right: calc(200vw + 150px);
+    }
+    .desktop_holder3{
+        left: calc(200vw + 150px);
+    }
+    .desktop_holder4{
+        right: 150px;
+    }
+
+    .getintouch {
+        font-size: 149px !important;
+    }
+    .subtouch {
+        font-size: 41px !important;
+        padding-left: 13px !important;
+    }
+    .links {
+        font-size: 42px !important;
+        line-height: 57px;
+        padding-left: 67px;
+    }
+    .contact_holder {
+    
+        padding-left: 20px;
+    }
     .icons{
         top:95%;
     }
@@ -1609,7 +1754,7 @@ and (orientation : landscape) {
 }
 /* ipad pro landscape */
 @media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
-    
+/*     
     #bg-1{
         background-position: right -300px bottom 0px !important;
     }
@@ -1621,7 +1766,7 @@ and (orientation : landscape) {
         }
     #bg-4{
         background-position: right -650px bottom 0px !important
-    }
+    } */
     .options_text {
         font-size: 3em !important;
     }
@@ -1640,6 +1785,20 @@ and (orientation : landscape) {
 
 /* ipad pro Portrait */
 @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+
+    .getintouch {
+        font-size: 127px !important;
+    }
+    .subtouch {
+        font-size: 35px !important;
+        padding-left: 23px !important;
+    }
+    .links {
+        font-size: 33px !important;
+        line-height: 42px;
+        padding-left: 36px;
+    }
+
     .options_text {
         font-size: 3em !important;
     }
