@@ -122,7 +122,9 @@
 
     
     <div id="fullpage" class="container-fluid w-100 px-0 mx-0 demo">
+
         <div class="section" data-anchor="section1">
+            
             <div id="large-header" class="large-header" style="height: 1740px;">
                 <canvas id="demo-canvas" width="980" height="1740"></canvas>
                 <div class="container stuff show">
@@ -175,6 +177,8 @@
                         </div>
                     </a>
                 </div>
+
+                <div class="black"></div>
                
             </div>
             <!-- <style>
@@ -726,7 +730,7 @@
 
     <script type="text/javascript">
         
-
+        var animationsLoaded = [];
         // PRELOAD
 
         // function preloader() {
@@ -928,10 +932,13 @@
                     var loadedSection = $(this);
                     var loadedSlide = loadedSection.find('.slide.active');
                     
+                    
 
                     const baby_rocket = $('.holder.rocket2');
                     // SlideNumber
                     var slideNumber = $('.fp-section.active').index() + 1;
+                    console.log("JUST LOADED ==== "+slideNumber);
+                    console.log("animations complete"+animationsLoaded);
 
                     $(".fp-tooltip.right").css({'opacity':'0.35'});
                     $("#fp-nav > ul > li:nth-child("+slideNumber+") > div").css({'opacity':'1'});
