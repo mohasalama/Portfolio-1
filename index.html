@@ -145,11 +145,11 @@
                                     <img class="fronticons" src="linkedin.svg" alt="">
                                 </div>
                             </a>
-                            <a href="#section5">
-                                <div class="button  trio  other d-flex align-items-center justify-content-center">
-                                    <img class="fronticons" src="mail.svg" alt="" style="transform:translateY(3px)">
-                                </div>
-                            </a>
+                           
+                            <div class="button trio other d-flex mail align-items-center justify-content-center">
+                                <img class="fronticons" src="mail.svg" alt="" style="transform:translateY(3px)">
+                            </div>
+                        
                         </div>
                         
                             
@@ -170,12 +170,12 @@
                     
                 </div>
                 <div class="row show">
-                    <a href="#section2">
-                        <div class="arrow-box">
-                            <div class="arrow arrow-1"></div>
-                            <div class="arrow arrow-2"></div>
-                        </div>
-                    </a>
+                    
+                    <div class="arrow-box">
+                        <div class="arrow arrow-1"></div>
+                        <div class="arrow arrow-2"></div>
+                    </div>
+                   
                 </div>
 
                 <!-- <div class="black"></div> -->
@@ -235,11 +235,11 @@
                     
 
                     <div class="row justify-content-center show viewmywork" style="padding-top:2em">
-                        <a href="#section4" style="text-decoration: none;">
-                            <div class="mybutton viewwork d-flex align-items-center justify-content-center">
-                                <p class="main-title box d-block my-auto"><span class="fat viewbutton">View My Work</span></p>
-                            </div>
-                        </a>
+                        
+                        <div class="mybutton viewwork d-flex align-items-center justify-content-center">
+                            <p class="main-title box d-block my-auto"><span class="fat viewbutton">View My Work</span></p>
+                        </div>
+                     
                     </div>
                     <div class="hold">
                         <img class="programmer show d-flex mx-auto" src="programmer.svg" alt="">
@@ -1103,6 +1103,22 @@
                 $('.fp-viewing-section2').attr('style', 'cursor: default !important');
                 
                 
+            })
+
+            $('.mybutton').on('click',function(e){
+                $.fn.fullpage.moveSectionDown();
+                $.fn.fullpage.moveSectionDown();
+            })
+            $('.arrow-box').on('click',function(e){
+
+                $.fn.fullpage.moveSectionDown();
+            })
+            $('.mail').on('click',function(e){
+
+                $.fn.fullpage.moveSectionDown();
+                $.fn.fullpage.moveSectionDown();
+                $.fn.fullpage.moveSectionDown();
+                $.fn.fullpage.moveSectionDown();
             })
             // How to move sections up and down
             // $('#hello').on('click',function(e){
