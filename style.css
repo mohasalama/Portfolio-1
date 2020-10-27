@@ -763,6 +763,22 @@ body{
         z-index:3000;
     }
 
+    /* custom cursor */
+
+    /* #circle{
+        width: 30px;
+        height: 30px;
+        border: 1px solid #3c2946;
+        background-color:rgba(140, 194, 207, 0.561);
+        position:fixed;
+        border-radius:50%;
+        z-index:600000;
+      }
+      *{
+        cursor:none !important;
+      } */
+
+
  
 
 /* ------------------------loader------------------------- */
